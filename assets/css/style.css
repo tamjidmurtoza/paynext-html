@@ -3659,13 +3659,10 @@ hr {
 /*--------------------------------------------------------------
   12. CTA
 ----------------------------------------------------------------*/
-.cs_cta.cs_style_1.cs_type_1 .cs_cta_in {
-  max-width: 710px;
-  margin-left: auto;
-}
-.cs_cta.cs_style_1.cs_type_1 .cs_cta_in .cs_section_subtitle {
+.cs_cta.cs_style_1 .cs_badge {
   border: 1px solid rgba(255, 255, 255, 0.3);
   background-color: rgba(255, 255, 255, 0.1);
+  padding: 8px 20px;
 }
 
 .cs_cta.cs_style_2 {
