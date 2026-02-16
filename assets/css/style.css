@@ -1633,6 +1633,11 @@ label {
 /*--------------------------------------------------------------
   4. General
 ----------------------------------------------------------------*/
+.cs_fs_14 {
+  font-size: 14px;
+  line-height: 1.86em;
+}
+
 .cs_fs_16 {
   font-size: 16px;
   line-height: 1.5em;
@@ -1662,6 +1667,12 @@ label {
   font-size: 48px;
   line-height: 1.21em;
   letter-spacing: -1px;
+}
+
+.cs_fs_62 {
+  font-size: 62px;
+  line-height: 1.113em;
+  letter-spacing: -2px;
 }
 
 .cs_fs_72 {
@@ -4442,4 +4453,159 @@ hr {
 .cs_post_style_1:hover .cs_post_info {
   box-shadow: 0 50px 30px -40px rgba(0, 0, 0, 0.1);
   border-color: var(--border-color);
+}
+
+.cs-tab_links li {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.cs-tab_links li a {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.cs-tab_links li a:hover {
+  color: var(--secondary-color);
+}
+
+.cs-tab_links li a[href=yearly]::before {
+  left: initial;
+  right: 100%;
+}
+
+.cs-tab_links li.active a {
+  pointer-events: none;
+  color: var(--secondary-color);
+}
+
+.cs-tab_links li.active .cs_switch::before {
+  left: 4px;
+}
+
+.cs-tab_links .cs_switch {
+  display: inline-block;
+  position: relative;
+  width: 60px;
+  height: 28px;
+  background-color: var(--accent-color);
+  border-radius: 20px;
+  margin: 0 15px;
+}
+
+.cs-tab_links .cs_switch::before {
+  content: "";
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: var(--white-color);
+  position: absolute;
+  top: 50%;
+  left: 34px;
+  transform: translateY(-50%);
+  transition: all 0.4s ease;
+}
+
+.cs-tab_links a {
+  position: relative;
+}
+
+.cs-tab_links a::before {
+  content: "";
+  height: 28px;
+  width: 45px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 100%;
+  z-index: 1;
+}
+
+.cs_pricing_table.cs_style_1 {
+  width: 100%;
+  height: 100%;
+  padding: 32px;
+  border: 1px solid #e3e8ef;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+}
+.cs_pricing_table.cs_style_1 .cs_offer_wrap {
+  margin-left: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 2px 8px;
+  border-radius: 8px;
+  background-color: #def5ed;
+  color: #049f6c;
+  white-space: nowrap;
+}
+
+.cs_pricing_table.cs_style_1 .yearlyPrice,
+.cs_pricing_table.cs_style_1 .yearlyText {
+  display: none;
+}
+
+.cs_pricing_table.cs_style_1 hr {
+  margin-top: 0;
+  margin-bottom: 20px;
+  border-color: #e3e8ef;
+}
+
+.cs_pricing_table.cs_style_1 .cs_pricing_feature_list li {
+  padding-left: 40px;
+  position: relative;
+  margin-bottom: 24px;
+}
+.cs_pricing_table.cs_style_1 .cs_pricing_feature_list li .cs_feature_icon {
+  height: 32px;
+  width: 32px;
+  margin-top: -6px;
+  border-radius: 50%;
+  background-color: var(--gray-color-2);
+}
+
+.cs_pricing_table.cs_style_1 .cs_pricing_feature_list li:last-child {
+  margin-bottom: 0;
+}
+
+.cs_pricing_table.cs_style_1 .cs_pricing_feature_list .cs_feature_icon {
+  position: absolute;
+  top: 3px;
+  left: 0;
+}
+
+.cs_pricing_table.cs_style_1 .cs_pricing_btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  margin-top: auto;
+  text-align: center;
+  border: 1px solid var(--border-color);
+  border-radius: 40px;
+  text-shadow: 0 50px 0 currentColor;
+  overflow: hidden;
+}
+
+.cs_pricing_table.cs_style_1 .cs_pricing_btn span {
+  transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.cs_pricing_table.cs_style_1 .cs_pricing_btn:hover span {
+  transform: translateY(-50px);
+}
+
+.cs_pricing_table.cs_style_1:hover .cs_pricing_btn {
+  background-color: transparent;
+  color: var(--heading-color);
+}
+
+@media (max-width: 1399px) {
+  .cs_pricing_table.cs_style_1 {
+    padding: 32px 20px 40px;
+  }
 }/*# sourceMappingURL=style.css.map */
