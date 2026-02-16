@@ -2,21 +2,26 @@
   12. CTA
 ----------------------------------------------------------------*/
 .cs_cta.cs_style_1 {
+  border-radius: 32px;
   .cs_badge {
     border: 1px solid rgba(255, 255, 255, 0.3);
     background-color: rgba(255, 255, 255, 0.1);
     padding: 8px 20px;
   }
-}
-.cs_cta.cs_style_2 {
-  height: 300px;
-  padding: 24px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  &.cs_type_1 {
-    min-height: 400px;
-    height: 100%;
-    align-items: flex-start;
+  .cs_cta_title {
+    letter-spacing: -2px;
   }
 }
+
+// .cs_cta.cs_style_2 {
+//   height: 300px;
+//   padding: 24px;
+//   display: flex;
+//   justify-content: flex-end;
+//   align-items: flex-end;
+//   &.cs_type_1 {
+//     min-height: 400px;
+//     height: 100%;
+//     align-items: flex-start;
+//   }
+// }
