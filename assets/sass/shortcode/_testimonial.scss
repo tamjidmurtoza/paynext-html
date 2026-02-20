@@ -1,25 +1,85 @@
 /*--------------------------------------------------------------
   13. Testimonial
 ----------------------------------------------------------------*/
-.cs_testimonial.cs_style_1 {
-  .cs_testimonial_blockquote {
-    font-style: initial;
-    span {
-      color: #7f8f80;
+.cs_white_bg {
+  hr {
+    border-color: #e3e8ef;
+    // margin: 64px 0;
+  }
+  .cs_testimonial.cs_style_1 {
+    hr {
+      margin-bottom: 32px;
+      border-color: #e3e8ef;
+    }
+
+    .cs_testimonial_meta {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      img {
+        height: 62px;
+        width: 62px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
     }
   }
-  .cs_testimonial_avatar_designation {
-    color: #7f8f80;
+}
+
+/*-------------------------------------------------
+ Counter Section
+---------------------------------------------------*/
+.cs_counter_wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  justify-content: space-around;
+  gap: 20px;
+}
+@media (max-width: 991px) {
+  .cs_counter_wrapper {
+    grid-template-columns: repeat(2, auto);
+    gap: 30px;
   }
-  .cs_testimonial_meta_wrap {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    img {
-      height: 48px;
-      width: 48px;
-      border-radius: 50%;
-      object-fit: cover;
-    }
+}
+@media (max-width: 450px) {
+  .cs_counter_wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.cs_counter_wrapper.cs_type_1 {
+  border-radius: 0 0 15px 15px;
+  padding: 70px 20px 71px;
+}
+@media (max-width: 1199px) {
+  .cs_counter_wrapper.cs_type_1 {
+    grid-template-columns: repeat(2, auto);
+    gap: 35px 100px;
+    justify-content: center;
+  }
+}
+@media (max-width: 767px) {
+  .cs_counter_wrapper.cs_type_1 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.cs_counter_wrapper.cs_type_2 {
+  padding: 91px 20px 88px;
+  justify-content: space-evenly;
+}
+
+.cs_funfact.cs_style_2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  .odometer {
+    letter-spacing: 1px;
+  }
+}
+.cs_funfact.cs_style_2 .cs_finfact_icon {
+  flex: none;
+}
+@media (max-width: 575px) {
+  .cs_funfact.cs_style_2 {
+    gap: 20px;
   }
 }

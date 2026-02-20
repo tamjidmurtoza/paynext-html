@@ -200,6 +200,14 @@
     padding-right: 20px;
   }
 }
+.cs_gap_x_50 {
+  margin-left: -25px;
+  margin-right: -25px;
+  > * {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
 
 .cs_gap_x_20 {
   margin-left: -10px;
@@ -235,6 +243,11 @@ hr {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.cs_center_column {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .cs_white_color {

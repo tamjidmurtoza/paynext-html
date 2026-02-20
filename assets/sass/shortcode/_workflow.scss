@@ -1,0 +1,32 @@
+.cs_workflow_wrap {
+  padding-left: 40px;
+  .cs_iconbox {
+    position: relative;
+    padding-bottom: 52px;
+    padding-left: 64px;
+    &:last-child {
+      padding-bottom: 0;
+      &::before {
+        display: none;
+      }
+    }
+    &::before {
+      content: "";
+      width: 8px;
+      height: 100%;
+      position: absolute;
+      left: 17px;
+      top: 0;
+      background-color: var(--white-color);
+    }
+  }
+  .cs_iconbox_icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: var(--white-color);
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
