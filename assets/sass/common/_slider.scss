@@ -147,6 +147,24 @@
     }
   }
 }
+.cs_slider_arrows.cs_style_5 {
+  display: flex;
+  gap: 24px;
+  .cs_left_arrow,
+  .cs_right_arrow {
+    height: 40px;
+    width: 40px;
+    border: 1px solid #e3e8ef;
+    flex: none;
+    transition: all 0.4s ease;
+    &:hover {
+      background-color: var(--primary);
+    }
+  }
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+}
 .cs_slider_arrows_4_transparent_wrap {
   position: absolute;
   width: 100%;

@@ -22,6 +22,8 @@
   | 9. Hover To Active
   | 10. Isotop
   | 11. Dynamic contact form
+  | 12. Counter Animation
+  | 13. Tabs
   |
   */
 
@@ -48,6 +50,7 @@
     lightGallery();
     hoverActive();
     isotopInit();
+    tabs();
     if ($.exists(".wow")) {
       new WOW().init();
     }
@@ -387,7 +390,7 @@
   }
 
   /*--------------------------------------------------------------
-    10. Counter Animation
+    12. Counter Animation
   --------------------------------------------------------------*/
   function counterInit() {
     if ($.exists(".odometer")) {
@@ -407,5 +410,20 @@
         });
       });
     }
+  }
+
+  /*--------------------------------------------------------------
+    13. Tabs
+  --------------------------------------------------------------*/
+  function tabs() {
+    $(".cs-tabs .cs-tab_links a").on("click", function (e) {
+      var currentAttrValue = $(this).attr("href");
+      $(".cs-tabs " + currentAttrValue)
+        .fadeIn(400)
+        .siblings()
+        .hide();
+      $(this).parents("li").addClass("active").siblings().removeClass("active");
+      e.preventDefault();
+    });
   }
 })(jQuery); // End of use strict

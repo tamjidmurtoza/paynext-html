@@ -101,7 +101,7 @@
     </div>
     <!-- End Header Section -->
     <!-- Start Page Heading Sectoin -->
-    <section class="cs_page_heading cs_style_1 cs_bg_filed cs_heading_bg" data-src="assets/img/about_heading_bg.jpg">
+    <!-- <section class="cs_page_heading cs_style_1 cs_bg_filed cs_heading_bg" data-src="assets/img/about_heading_bg.jpg">
       <div class="container">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">Home</a></li>
@@ -109,156 +109,257 @@
         </ol>
         <h1 class="cs_page_title mb-0 cs_fs_80 wow fadeInUp">CONTACT US</h1>
       </div>
-    </section>
+    </section> -->
     <!-- End Page Heading Sectoin -->
+
+     <!-- Start hero Section -->
+    <section class="cs_hero cs_style_1 cs_type_1 cs_heading_bg cs_bg_filed" data-src="assets/img/cta_bg.jpg">
+      <div class="cs_height_64 cs_height_lg_50"></div>
+      <div class="container">
+        <div class="cs_hero_in text-center">
+          <h1 class="cs_fs_72 cs_white_color cs_mb_24 text-capitalize wow fadeInDown">We’d Love to <br> Hear from You</h1>
+          <p class="cs_section_subtitle cs_light cs_white_color cs_mb_40 cs_fs_20">Reach out to us with your questions, feedback, or partnership inquiries.</p> 
+        </div>
+      </div>
+    </section>
+    <!-- End hero Section -->
+
     <!-- Start Contact Section -->
-    <div class="cs_height_100 cs_height_lg_70"></div>
+    <div class="cs_height_112 cs_height_lg_70"></div>
     <div class="container">
       <div class="row cs_gap_y_40">
-        <div class="col-lg-5">
+        <div class="col-lg-6">
+          <div class="cs_section_heading cs_style_4 cs_mb_25">
+            <h2 class="cs_section_title cs_fs_48 cs_semibold cs_mb_32">Have Questions? We're <br> Here to Help!</h2>
+          </div>
+          <ul class="cs_footer_widget_menu cs_contact_info cs_mp_0">
+            <li class="mb-0">
+              <h3 class="cs_fs_20 cs_body_color cs_normal cs_mb_8">Email</h3>
+              <a href="mailto:info@viewlightstudio.com" class="cs_fs_20 cs_semibold cs_heading_color mb-0">info@viewlightstudio.com</a>
+            </li>
+            <li class="mb-0">
+              <h3 class="cs_fs_20 cs_body_color cs_normal cs_mb_8">Call Us</h3>
+              <a href="tel:1234567890" class="cs_heading_color cs_fs_20 cs_semibold  mb-0">(123) 456-7890</a>
+            </li>
+            <li class="mb-0">
+              <h3 class="cs_fs_20 cs_body_color cs_normal cs_mb_8">Location</h3>
+              <p class="cs_mb_32 cs_heading_color cs_fs_20 cs_semibold">123 Innovation Street, Suite 500 Fintech City, State, 56789</p>
+            </li>
+            <li class="mb-0">
+              <p class="cs_fs_20 cs_normal cs_mb_8">Follow Us</p>
+              <div class="cs_social_btns cs_style_1">
+                <a href="#" class="cs_center">
+                  <i class="fa-brands fa-x-twitter"></i>
+                </a>
+                <a href="#" class="cs_center">
+                  <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="#" class="cs_center">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#" class="cs_center">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                
+              </div>
+            </li>
+          </ul>
           <div class="cs_map">
-            <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96652.27317354927!2d-74.33557928194516!3d40.79756494697628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3a82f1352d0dd%3A0x81d4f72c4435aab5!2sTroy+Meadows+Wetlands!5e0!3m2!1sen!2sbd!4v1563075599994!5m2!1sen!2sbd" allowfullscreen></iframe>
+           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d233667.49929845124!2d90.25487052696046!3d23.781067241102527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8b087026b81%3A0x8fa563bbdd5904c2!2sDhaka!5e0!3m2!1sen!2sbd!4v1771824189700!5m2!1sen!2sbd"></iframe>
           </div>
         </div>
-        <div class="col-lg-7">
+        <div class="col-lg-6">
           <div class="cs_pl_40">
-            <div class="cs_section_heading cs_style_4 cs_mb_25">
-              <h2 class="cs_section_title cs_fs_32 cs_bold mb-0">SEND US A <span>MESSAGE</span></h2>
-            </div>
-            <form action="https://api.web3forms.com/submit" method="POST" class="row cs_gap_y_24" id="cs_form">
-              <input type="hidden" name="access_key" value="cd98b256-0db3-478c-ab28-1ec94f80447c">
-              <div class="col-sm-6">
-                <input type="text" name="name" class="cs_form_field" placeholder="Name" required>
+            <form  action="https://api.web3forms.com/submit" method="POST" class="cs_contact_form" id="cs_form">
+              <input type="hidden" name="access_key" value="cd98b256-0db3-478c-ab28-1ec94f804124">
+              <!-- Optional: Can be type="hidden" or type="text" for subject -->
+              <input type="hidden" name="subject" value="Submission from Laralink Template">
+              <div class="cs_form_input_wrapper">
+                <label for="name" class="cs_medium cs_heading_color_2">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Full Name" required class="cs_form_field cs_radius_8 cs_normal">
               </div>
-              <div class="col-sm-6">
-                <input type="email" name="email" class="cs_form_field" placeholder="Email" required>
+              <div class="cs_form_input_wrapper">
+                <label for="email" class="cs_medium cs_heading_color_2">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required
+                  class="cs_form_field cs_radius_8 cs_normal">
               </div>
-              <div class="col-lg-12">
-                <textarea class="cs_form_field" name="message" placeholder="Message" rows="5" required></textarea>
+              <div class="cs_form_input_wrapper">
+                <label for="phone" class="cs_medium cs_heading_color_2">Phone Number (Optional)</label>
+                <input type="text" id="phone" name="phone" placeholder="Enter your mobile number" required
+                  class="cs_form_field cs_radius_8 cs_normal">
               </div>
-              <div class="col-lg-12">
-                <button class="cs_btn cs_style_1 cs_type_1 cs_bold cs_heading_bg cs_white_color w-100" type="submit">Send Message</button>
-                <div id="cs_result" class="cs_heading_color"></div>
+              <div class="cs_form_input_wrapper">
+                <label for="message" class="cs_medium cs_heading_color_2">Message</label>
+                <textarea name="message" id="message" rows="5" class="cs_form_field cs_radius_8 cs_normal" placeholder="Enter your message"></textarea>
+              </div>
+              <div class="cs_form_input_wrapper">
+                <button type="submit" class="cs_btn cs_style_1 cs_type_1 cs_fs_16 cs_semibold cs_radius_30 cs_heading_font"><span class="cs_btn_text cs_white_color">Send Message</span>
+                </button>
+                <div class="cs_fs_14 cs_blue_color mt-3" id="cs_result"></div>
               </div>
             </form>
             <div class="cs_height_60 cs_height_lg_40"></div>
-            <div class="cs_section_heading cs_style_4 cs_mb_25">
-              <h2 class="cs_section_title cs_fs_32 cs_bold mb-0">GET IN <span>TOUCH</span></h2>
-            </div>
-            <ul class="cs_contact_info cs_mp_0">
-              <li>
-                <p class="mb-0">EMAIL</p>
-                <h4 class="mb-0 cs_fs_20 cs_bold">hallo@Paynext.com</h4>
-              </li>
-              <li>
-                <p class="mb-0">LOCATION</p>
-                <h4 class="mb-0 cs_fs_20 cs_bold">+123 456 7890</h4>
-              </li>
-              <li>
-                <p class="mb-0">ADDRESS</p>
-                <h4 class="mb-0 cs_fs_20 cs_bold">123 Any Where St, Any City, Any State</h4>
-              </li>
-            </ul>
+            
           </div>
         </div>
       </div>
     </div>
     <div class="cs_height_100 cs_height_lg_70"></div>
-    <!-- Start Contact Section -->
-    <!-- Start Card Section -->
-    <section class="cs_half_bg">
+    <!-- End Contact Section -->
+
+    <!-- Start FAQ Section -->
+    <section class="cs_gray_bg_2">
+      <div class="cs_height_112 cs_height_lg_70"></div>
       <div class="container">
-        <div class="cs_card cs_style_1 cs_heading_bg cs_bg_filed" data-src="assets/img/card_bg.jpg">
-          <div class="cs_card_top">
-            <div class="cs_card_tags">
-              <a href="index.html" class="cs_card_tag">Home</a>
-              <a href="#" class="cs_card_tag">Garden</a>
-              <a href="#" class="cs_card_tag">Landscape Design</a>
-              <a href="#" class="cs_card_tag">Expert</a>
-            </div>
-          </div>
-          <div class="cs_card_bottom">
-            <h2 class="cs_card_title cs_gradient_color_1 cs_fs_80 mb-0">MAKE YOUR DREAM <br>GARDEN INTO REALITY</h2>
-          </div>
-          <a href="#" class="cs_arrow_btn cs_size_lg cs_center cs_white_bg cs_heading_color">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z" fill="currentColor"></path>
-            </svg>
-          </a>
+        <div class="text-center">
+          <p class="cs_badge cs_fs_16 cs_accent_color cs_semibold cs_white_bg cs_mb_16 wow fadeInDown">FAQ</p>
+          <h1 class="cs_fs_62 cs_heading_color text-capitalize wow fadeInDown mb-0">Your concerns, answered</h1>
+          <div class="cs_height_64 cs_height_lg_50"></div>
         </div>
+        <ul class="cs_faq_table cs_mp_0">
+          <li>
+            <h4 class="cs_question cs_fs_24 cs_accent_color cs_mb_16">How secure is Paynext?</h4>
+            <p class="cs_answer cs_fs_18 cs_body_color mb-0">We use state-of-the-art encryption to ensure your data is safe.</p>
+          </li>
+          <li>
+            <h4 class="cs_question cs_fs_24 cs_accent_color cs_mb_16">Can I cancel my plan anytime?</h4>
+            <p class="cs_answer cs_fs_18 cs_body_color mb-0">Yes, you can cancel your plan anytime without any penalties.</p>
+          </li>
+          <li>
+            <h4 class="cs_question cs_fs_24 cs_accent_color cs_mb_16">Does Paynext support international transactions?</h4>
+            <p class="cs_answer cs_fs_18 cs_body_color mb-0">Contact us through our booking form or call us to discuss your needs and receive a personalized quote.</p>
+          </li>
+          <li>
+            <h4 class="cs_question cs_fs_24 cs_accent_color cs_mb_16">How can I get a quote?</h4>
+            <p class="cs_answer cs_fs_18 cs_body_color mb-0">Contact us through our booking form or call us to discuss your needs and receive a personalized quote.</p>
+          </li>
+          <li>
+            <h4 class="cs_question cs_fs_24 cs_accent_color cs_mb_16">Are there any hidden fees?</h4>
+            <p class="cs_answer cs_fs_18 cs_body_color mb-0">No, we believe in transparent pricing. All fees are clearly outlined in your plan details.</p>
+          </li>
+          <li>
+            <h4 class="cs_question cs_fs_24 cs_accent_color cs_mb_16">Is Paynext suitable for small businesses?</h4>
+            <p class="cs_answer cs_fs_18 cs_body_color mb-0">Absolutely! Paynext is designed to support businesses of all sizes, from startups to large enterprises.</p>
+          </li>
+        </ul>
       </div>
+      <div class="cs_height_112 cs_height_lg_70"></div>
     </section>
-    <!-- End Card Section -->
+    <!-- End FAQ Section -->
+
+    <!-- Start CTA Section -->
+    <div class="container">
+      <div class="cs_cta_style_2 cs_heading_bg cs_bg_filed position-relative" data-src="assets/img/cta_bg.jpg">
+        <div class="row">
+          <div class="col-lg-4 z-1">
+            <h2 class="cs_fs_48 cs_white_color cs_mb_32 wow fadeInDown">Let’s Redefine Finance Together</h2>
+            <p class="cs_light cs_white_color cs_mb_32 cs_fs_20">Connect with us to start your financial journey today.</p>
+            <a href="contact.html" class="cs_btn cs_style_1 cs_semibold cs_heading_color cs_white_bg wow fadeInUp">Contact Us</a>
+          </div>
+          <div class="col-lg-4 z-1 ms-auto">
+            <h4 class="cs_fs_20 cs_white_color cs_semibold cs_mb_16 wow fadeInDown">Office Address</h4>
+            <p class="cs_light cs_white_color cs_mb_32 cs_fs_18">123 Innovation Street, Suite 500, Fintech City, State, 56789</p>
+            <h4 class="cs_fs_20 cs_white_color cs_semibold cs_mb_16 wow fadeInDown">Contact Info</h4>
+            <span class="cs_address cs_mb_16">
+              <span class="cs_white_color cs_fs_18"><i class="fa-regular fa-envelope"></i></span>
+              <p class="cs_light cs_white_color cs_fs_18">support@paynext.com</p>
+            </span>
+            <span class="cs_info">
+              <span class="cs_white_color cs_fs_18"><i class="fa-solid fa-phone"></i></span>
+              <p class="cs_light cs_white_color cs_fs_18">+1-800-123-4567</p>
+            </span>
+          </div>
+        </div>
+        <div class="cs_contact_img">
+          <div class="cs_img_outline">
+            <img src="assets/img/about/contact_img.png" alt="Phone interface">
+          </div>
+       </div>
+      </div>
+      <div class="cs_height_64 cs_height_lg_50"></div>
+    </div>
+    <!-- End CTA Section -->
+    
     <!-- Start Footer Section -->
-    <footer class="cs_footer cs_style_1 cs_color_1">
+    <footer class="cs_footer cs_style_1">
       <div class="container">
         <div class="cs_footer_row">
           <div class="cs_footer_col">
             <div class="cs_footer_widget">
               <div class="cs_text_widget">
-                <img src="assets/img/footer_logo_2.svg" alt="">
-                <p>Stay updated with our latest <br>
-                  projects and gardening tips.</p>
+                <img src="assets/img/footer_logo.png" alt="Logo" class="wow zoomIn">
               </div>
             </div>
+          </div>
+          <div class="cs_footer_col">
             <div class="cs_footer_widget">
-              <form action="#" class="cs_newsletter cs_style_1">
-                <input type="email" placeholder="Enter your email address ..." class="cs_newsletter_input">
-                <button type="submit" class="cs_newsletter_btn cs_arrow_btn cs_white_bg cs_heading_color">
-                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M15.3846 0H0.615385C0.275692 0 0 0.275692 0 0.615385C0 0.955077 0.275692 1.23077 0.615385 1.23077H13.8988L0.180308 14.9495C-0.06 15.1898 -0.06 15.5794 0.180308 15.8197C0.300615 15.94 0.457846 16 0.615385 16C0.772923 16 0.930461 15.94 1.05046 15.8197L14.7692 2.10092V15.3846C14.7692 15.7243 15.0449 16 15.3846 16C15.7243 16 16 15.7243 16 15.3846V0.615385C16 0.275692 15.7243 0 15.3846 0Z" fill="currentColor"/>
-                  </svg>                    
-                </button>
+              <h4 class="cs_footer_widget_title">Company</h4>
+              <ul class="cs_footer_widget_menu cs_mp_0">
+                <li><a href="faq.html">About Us</a></li>
+                <li><a href="">Careers</a></li>
+                <li><a href="">Blog</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="cs_footer_col">
+            <div class="cs_footer_widget">
+              <h4 class="cs_footer_widget_title">Support</h4>
+              <ul class="cs_footer_widget_menu cs_mp_0">
+                <li><a href="about.html">Help Center</a></li>
+                <li><a href="gallery.html">FAQs</a></li>
+                <li><a href="projects.html">Contact Support</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="cs_footer_col">
+            <div class="cs_footer_widget">
+              <h4 class="cs_footer_widget_title">Legal</h4>
+              <ul class="cs_footer_widget_menu cs_mp_0">
+                <li><a href="service-details.html">Privacy Policy</a></li>
+                <li><a href="service-details.html">Terms of Service</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="cs_footer_col">
+            <div class="cs_footer_widget">
+              <h4 class="cs_footer_widget_title">Subscribe for Updates</h4>
+              <ul class="cs_footer_widget_menu cs_mp_0">
+                <li><a href="service-details.html">Get the latest news and updates directly in your inbox</a></li>
+              </ul>
+            </div>
+            <div class="cs_footer_widget">
+              <form action="#" class="cs_newsletter cs_style_1 cs_center">
+                <div class="cs_input cs_center">
+                  <svg class="cs_center" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                    <path d="M2.5 5.83317C2.5 5.39114 2.67559 4.96722 2.98816 4.65466C3.30072 4.3421 3.72464 4.1665 4.16667 4.1665H15.8333C16.2754 4.1665 16.6993 4.3421 17.0118 4.65466C17.3244 4.96722 17.5 5.39114 17.5 5.83317V14.1665C17.5 14.6085 17.3244 15.0325 17.0118 15.345C16.6993 15.6576 16.2754 15.8332 15.8333 15.8332H4.16667C3.72464 15.8332 3.30072 15.6576 2.98816 15.345C2.67559 15.0325 2.5 14.6085 2.5 14.1665V5.83317Z" stroke="#677489" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2.5 5.8335L10 10.8335L17.5 5.8335" stroke="#677489" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <input type="email" placeholder="Enter your email" class="cs_newsletter_input cs_light cs_fs_16">
+                </div>
+                <button type="submit" class="cs_newsletter_btn_style_1 cs_semibold cs_white_color">Send</button>
               </form>
-            </div>
-          </div>
-          <div class="cs_footer_col">
-            <div class="cs_footer_widget">
-              <h4 class="cs_footer_widget_title">SUPPORT</h4>
-              <ul class="cs_footer_widget_menu cs_mp_0">
-                <li><a href="faq.html">FAQ</a></li>
-                <li><a href="">USER GUIDE</a></li>
-                <li><a href="">TESTIMONIAL</a></li>
-                <li><a href="">CUSTOMER</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="cs_footer_col">
-            <div class="cs_footer_widget">
-              <h4 class="cs_footer_widget_title">LINKS</h4>
-              <ul class="cs_footer_widget_menu cs_mp_0">
-                <li><a href="about.html">ABOUT US</a></li>
-                <li><a href="gallery.html">GALLERY</a></li>
-                <li><a href="projects.html">PROJECTS</a></li>
-                <li><a href="blog.html">BLOG</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="cs_footer_col">
-            <div class="cs_footer_widget">
-              <h4 class="cs_footer_widget_title">SERVICES</h4>
-              <ul class="cs_footer_widget_menu cs_mp_0">
-                <li><a href="service-details.html">HOME GARDEN</a></li>
-                <li><a href="service-details.html">PLANT SELECTION</a></li>
-                <li><a href="service-details.html">HARDSCAPING</a></li>
-                <li><a href="service-details.html">PUBLIC GARDEN</a></li>
-              </ul>
             </div>
           </div>
         </div>
         <div class="cs_bottom_footer">
-          <div class="cs_bottom_footer_left">
-            <div class="cs_copyright">COURTESY © 2025. ALL RIGHTS RESERVED.</div>
+          <div class="cs_bottom_footer_left cs_center wow fadeInLeft">
+            <div class="cs_copyright cs_fs_16">© 2025 Peterdraw. All Rights Reserved.</div>
           </div>
-          <div class="cs_bottom_footer_right">
-            <ul class="cs_footer_links cs_mp_0">
-              <li>
-                <a href="#">PRIVACY POLICY</a>
-              </li>
-              <li>
-                <a href="#">TERMS & CONDITION</a>
-              </li>
-            </ul>
+          <div class="cs_bottom_footer_right cs_center wow fadeInRight">
+            <div class="cs_social_btns cs_style_1 cs_center">
+              <a href="#" class="cs_center">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+              <a href="#" class="cs_center">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+              <a href="#" class="cs_center">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="#" class="cs_center">
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+            </div>
           </div>
         </div>
       </div>

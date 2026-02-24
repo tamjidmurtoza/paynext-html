@@ -72,6 +72,9 @@
 .cs_radius_7 {
   border-radius: 7px;
 }
+.cs_radius_8 {
+  border-radius: 8px;
+}
 
 .cs_radius_10 {
   border-radius: 10px;
@@ -149,6 +152,9 @@
 .cs_gap_y_30 {
   gap: 30px 0;
 }
+.cs_gap_y_32 {
+  gap: 32px 0;
+}
 
 .cs_gap_y_35 {
   gap: 35px 0;
@@ -192,6 +198,14 @@
   gap: 100px 0;
 }
 
+.cs_gap_x_32 {
+  margin-left: -16px;
+  margin-right: -16px;
+  > * {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
 .cs_gap_x_40 {
   margin-left: -20px;
   margin-right: -20px;
@@ -206,6 +220,14 @@
   > * {
     padding-left: 25px;
     padding-right: 25px;
+  }
+}
+.cs_gap_x_64 {
+  margin-left: -32px;
+  margin-right: -32px;
+  > * {
+    padding-left: 32px;
+    padding-right: 32px;
   }
 }
 
@@ -260,6 +282,9 @@ hr {
 
 .cs_heading_color {
   color: var(--heading-color);
+}
+.cs_heading_color_2 {
+  color: var(--heading-color-2);
 }
 
 .cs_body_color {

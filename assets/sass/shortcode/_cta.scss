@@ -13,15 +13,31 @@
   }
 }
 
-// .cs_cta.cs_style_2 {
-//   height: 300px;
-//   padding: 24px;
-//   display: flex;
-//   justify-content: flex-end;
-//   align-items: flex-end;
-//   &.cs_type_1 {
-//     min-height: 400px;
-//     height: 100%;
-//     align-items: flex-start;
-//   }
-// }
+.cs_cta_style_2 {
+  width: 100%;
+  border-radius: 32px;
+  padding: 64px;
+  .cs_contact_img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 37%;
+    padding-right: calc(37% + 2px);
+    .cs_img_outline {
+      padding: 10px 2px 0;
+      border: 1px solid rgb(255, 255, 255, 0.5);
+      //   opacity: 50%;
+      border-bottom: 0;
+      border-radius: 70px 70px 0 0;
+    }
+  }
+  .cs_address {
+    display: flex;
+    gap: 12px;
+  }
+  .cs_info {
+    display: flex;
+    gap: 12px;
+  }
+}
