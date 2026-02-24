@@ -51,6 +51,7 @@
     hoverActive();
     isotopInit();
     tabs();
+    workflowAnimation();
     if ($.exists(".wow")) {
       new WOW().init();
     }
@@ -425,5 +426,57 @@
       $(this).parents("li").addClass("active").siblings().removeClass("active");
       e.preventDefault();
     });
+  }
+
+  /*--------------------------------------------------------------
+    13. Tabs
+  --------------------------------------------------------------*/
+  function workflowAnimation() {
+    // Get all cs_iconbox elements
+    var $items = $(".cs_workflow_wrap .cs_iconbox");
+    var currentIndex = 0;
+    var totalItems = $items.length;
+    var interval;
+
+    function activateNextItem() {
+      // Add active class to current item without removing previous ones
+      $items.eq(currentIndex).addClass("active");
+
+      // Increment index
+      currentIndex++;
+
+      // If we've reached the end
+      if (currentIndex >= totalItems) {
+        // Clear the current interval
+        clearInterval(interval);
+
+        // Wait 5 seconds, then remove all active classes
+        setTimeout(function () {
+          $items.removeClass("active");
+
+          // Reset index
+          currentIndex = 0;
+
+          // Wait another 5 seconds, then restart the cycle
+          setTimeout(function () {
+            startCycle();
+          }, 2000);
+        }, 2000);
+      }
+    }
+
+    function startCycle() {
+      // Reset index if needed
+      currentIndex = 0;
+
+      // Start the interval
+      interval = setInterval(activateNextItem, 2000);
+
+      // Activate first item immediately
+      activateNextItem();
+    }
+
+    // Start the cycle
+    startCycle();
   }
 })(jQuery); // End of use strict

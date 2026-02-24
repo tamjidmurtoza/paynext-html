@@ -4762,17 +4762,36 @@ hr {
 .cs_workflow_wrap .cs_iconbox:last-child {
   padding-bottom: 0;
 }
-.cs_workflow_wrap .cs_iconbox:last-child::before {
+.cs_workflow_wrap .cs_iconbox:last-child::before, .cs_workflow_wrap .cs_iconbox:last-child::after {
   display: none;
 }
-.cs_workflow_wrap .cs_iconbox::before {
+.cs_workflow_wrap .cs_iconbox::before, .cs_workflow_wrap .cs_iconbox::after {
   content: "";
   width: 8px;
-  height: 100%;
   position: absolute;
   left: 17px;
   top: 0;
-  background-color: var(--white-color);
+}
+.cs_workflow_wrap .cs_iconbox::before {
+  height: 0%;
+  background-color: #c1b6f8;
+  z-index: 1;
+}
+.cs_workflow_wrap .cs_iconbox::after {
+  height: 100%;
+  background-color: #fff;
+}
+.cs_workflow_wrap .cs_iconbox.active .cs_iconbox_icon {
+  background-color: #a38cf3;
+  animation: jump 0.3s cubic-bezier(0.5, 2.2, 0.7, 0.7) alternate;
+}
+.cs_workflow_wrap .cs_iconbox.active .cs_iconbox_icon svg,
+.cs_workflow_wrap .cs_iconbox.active .cs_iconbox_icon img {
+  filter: invert(100%) sepia(100%) grayscale(100%) brightness(200%);
+}
+.cs_workflow_wrap .cs_iconbox.active::before {
+  transition: all 2s ease;
+  height: 100%;
 }
 .cs_workflow_wrap .cs_iconbox_icon {
   width: 42px;
@@ -4782,8 +4801,17 @@ hr {
   position: absolute;
   left: 0;
   top: 0;
+  z-index: 2;
 }
 
+@keyframes jump {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
 .cs_contact_form {
   display: flex;
   flex-direction: column;

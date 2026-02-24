@@ -6,18 +6,41 @@
     padding-left: 64px;
     &:last-child {
       padding-bottom: 0;
-      &::before {
+      &::before,
+      &::after {
         display: none;
       }
     }
-    &::before {
+    &::before,
+    &::after {
       content: "";
       width: 8px;
-      height: 100%;
       position: absolute;
       left: 17px;
       top: 0;
-      background-color: var(--white-color);
+    }
+    &::before {
+      height: 0%;
+      background-color: #c1b6f8;
+      z-index: 1;
+    }
+    &::after {
+      height: 100%;
+      background-color: #fff;
+    }
+    &.active {
+      .cs_iconbox_icon {
+        background-color: #a38cf3;
+        animation: jump 0.3s cubic-bezier(0.5, 2.2, 0.7, 0.7) alternate;
+        svg,
+        img {
+          filter: invert(100%) sepia(100%) grayscale(100%) brightness(200%);
+        }
+      }
+      &::before {
+        transition: all 2s ease;
+        height: 100%;
+      }
     }
   }
   .cs_iconbox_icon {
@@ -28,5 +51,15 @@
     position: absolute;
     left: 0;
     top: 0;
+    z-index: 2;
+  }
+}
+@keyframes jump {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.2);
   }
 }
