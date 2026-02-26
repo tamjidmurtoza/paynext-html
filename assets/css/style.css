@@ -1745,6 +1745,10 @@ label {
   border-radius: 20px;
 }
 
+.cs_radius_24 {
+  border-radius: 24px;
+}
+
 .cs_mp_0 {
   list-style: none;
   margin: 0;
@@ -2066,6 +2070,10 @@ hr {
 .cs_btn.cs_style_1:hover {
   transform: translateY(-2px);
   background-color: rgba(255, 255, 255, 0.8);
+}
+.cs_btn.cs_style_1.cs_type_1 {
+  color: var(--white-color);
+  background: linear-gradient(1deg, #1c0e3f -8.1%, #4925a5 57.04%);
 }
 
 .cs_badge {
@@ -2740,6 +2748,9 @@ hr {
   height: 100px;
   transition: all 0.3s ease;
 }
+.cs_site_header.cs_style_1 .cs_main_header_in.cs_type_1 {
+  border-bottom: 1px solid #e3e8ef;
+}
 .cs_site_header.cs_style_1 .cs_top_header_in {
   height: 50px;
 }
@@ -2763,6 +2774,10 @@ hr {
   height: 80px;
 }
 .cs_site_header.cs_style_1.cs_color_1.cs_sticky_active {
+  background-color: var(--white-color);
+  box-shadow: 0 10px 10px -10px rgba(55, 72, 54, 0.06);
+}
+.cs_site_header.cs_style_1.cs_color_2.cs_sticky_active {
   background-color: var(--white-color);
   box-shadow: 0 10px 10px -10px rgba(55, 72, 54, 0.06);
 }
@@ -2851,7 +2866,6 @@ hr {
     position: relative;
     height: inherit;
     align-items: center;
-    color: var(--white-color);
   }
   .cs_nav .cs_nav_list > li > a:hover {
     opacity: 0.65;
@@ -4602,13 +4616,35 @@ hr {
   line-height: 1.19em;
 }
 
-.cs_avatar {
+.cs_post_avatar {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 16px;
 }
-.cs_avatar .cs_avatar_icon {
+.cs_post_avatar .cs_post_avatar_text span {
+  padding-left: 20px;
+  position: relative;
+  margin-left: 10px;
+}
+.cs_post_avatar .cs_post_avatar_text span::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--white-color);
+  left: 0;
+  top: 7px;
+}
+.cs_post_avatar .cs_post_avatar_text span:first-child {
+  margin-left: 0;
+  padding-left: 0;
+}
+.cs_post_avatar .cs_post_avatar_text span:first-child::after {
+  display: none;
+}
+.cs_post_avatar .cs_post_avatar_icon {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -4683,6 +4719,43 @@ hr {
   gap: 15px;
   align-items: center;
   justify-content: space-between;
+}
+
+.cs_blog_details_heading {
+  padding: 50px 0;
+}
+.cs_blog_details_heading .cs_post_avatar_text span::after {
+  background-color: var(--body-color);
+}
+
+.cs_blog_details ul {
+  list-style: none;
+  padding-left: 32px;
+  margin: 32px 0;
+}
+.cs_blog_details ul li:not(:last-child) {
+  margin-bottom: 32px;
+}
+.cs_blog_details .cs_blockquote {
+  padding: 16px;
+  background: #f8fafc;
+}
+
+.cs_single_blog_tags {
+  gap: 16px;
+}
+.cs_single_blog_tags a {
+  padding: 8px 12px;
+  background-color: #f1f4f8;
+  border: 1px solid #cdd5e0;
+  border-radius: 24px;
+}
+
+.cs_article_heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 .cs-tab_links.cs-style1 {

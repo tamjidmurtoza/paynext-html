@@ -101,6 +101,9 @@
 .cs_radius_20 {
   border-radius: 20px;
 }
+.cs_radius_24 {
+  border-radius: 24px;
+}
 
 .cs_mp_0 {
   list-style: none;
@@ -406,6 +409,10 @@ hr {
   &:hover {
     transform: translateY(-2px);
     background-color: rgba(255, 255, 255, 0.8);
+  }
+  &.cs_type_1 {
+    color: var(--white-color);
+    background: linear-gradient(1deg, #1c0e3f -8.1%, #4925a5 57.04%);
   }
 }
 .cs_badge {
