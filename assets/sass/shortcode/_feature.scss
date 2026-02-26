@@ -1,0 +1,29 @@
+.cs_cards_wrapper {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(12, 1fr);
+  .cs_card {
+    grid-column: auto / span 4;
+    &:nth-child(4n + 4),
+    &:nth-child(4n + 5) {
+      grid-column: auto / span 6;
+    }
+  }
+}
+.cs_card {
+  padding: 32px;
+  border-radius: 24px;
+  .cs_card_thumb {
+    .cs_lg_img {
+      width: 100%;
+      box-shadow: 21px 28px 66px 0 rgba(52, 20, 139, 0.11);
+      border-radius: 12px;
+    }
+    .cs_mini_img {
+      position: absolute;
+      right: -12px;
+      top: 0;
+      z-index: 1;
+    }
+  }
+}
