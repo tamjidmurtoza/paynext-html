@@ -120,7 +120,7 @@
 
 .cs_site_header.cs_style_1 {
   &.cs_sticky_active {
-    background-color: var(--heading-color);
+    background-color: var(--accent-color);
     box-shadow: 0 10px 10px -10px rgba(255, 255, 255, 0.06);
     .cs_main_header_in {
       height: 80px;
@@ -223,13 +223,16 @@
         }
 
         > a {
-          padding: 10px 0;
+          padding: 8px 24px;
           display: inline-flex;
           position: relative;
           height: inherit;
           align-items: center;
           &:hover {
-            color: rgba(255, 255, 255, 0.6);
+            padding: 8px 24px;
+            border-radius: 30px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: inherit;
           }
         }
 
