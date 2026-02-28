@@ -2,7 +2,8 @@
   8. Footer
 ----------------------------------------------------------------*/
 .cs_footer_widget_menu a,
-.cs_footer_links a {
+.cs_footer_links a,
+.cs_post_style_1 .cs_post_title a {
   background-repeat: no-repeat;
   background-image: linear-gradient(90deg, currentColor 0, currentColor 100%);
   transition:
@@ -36,7 +37,7 @@
 .cs_social_btns.cs_style_1 {
   display: flex;
   flex-wrap: wrap;
-  font-size: 13px;
+  font-size: 14px;
   gap: 14px;
   a {
     height: 32px;
@@ -46,7 +47,10 @@
     outline: none;
     background-color: #f1f4f8;
     display: flex;
+    color: #97a3b6;
     &:hover {
+      background-color: var(--accent-color);
+      color: var(--white-color);
       transform: scale(1.08);
     }
   }
@@ -82,39 +86,21 @@
     }
   }
 }
-.cs_text_widget {
-  display: flex;
-  align-items: center;
-  gap: 32px;
-  @media (max-width: 575px) {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  p {
-    margin: 0;
-    padding-left: 32px;
-    border-left: 2px solid var(--heading-color);
-    @media (max-width: 575px) {
-      padding-left: 15px;
-    }
-  }
-}
+
 .cs_footer_widget + .cs_footer_widget {
-  margin-top: 32px;
+  margin-top: 24px;
 }
 .cs_newsletter.cs_style_1 {
   position: relative;
-  border: 1px solid var(--body-color);
-  border-radius: 42px;
-  padding: 7px 8px 7px 24px;
   .cs_newsletter_input {
-    // height: 100%;
-    padding: 6px 56px 6px 12px;
-    border: none;
+    height: 100%;
+    padding: 16px 85px 16px 52px;
     outline: none;
     display: block;
     width: 100%;
-    opacity: 1;
+    border: 1px solid #e7e7e7;
+    border-radius: 50px;
+
     @media (max-width: 1199px) {
       height: 70px;
       padding: 10px 70px 10px 20px;
@@ -129,47 +115,50 @@
       opacity: 0.75;
     }
   }
+
   .cs_newsletter_btn {
-    position: absolute;
-    right: 24px;
-    top: 24px;
-    @media (max-width: 1199px) {
-      right: 11px;
-      top: 11px;
-    }
-  }
-  .cs_newsletter_btn_style_1 {
     padding: 8px 16px;
     border: none;
     outline: none;
     border-radius: 42px;
-    gap: 6px;
     position: absolute;
     right: 8px;
     line-height: 1.25em;
+    font-weight: 600;
     background: linear-gradient(
       60deg,
       #1c0e3f 19%,
       rgba(90, 64, 154, 0.7) 86.31%
     );
+    top: 8px;
+    &:hover {
+      transform: scale(1.04);
+    }
+  }
+  .cs_form_icon {
+    display: flex;
+    position: absolute;
+    left: 24px;
+    top: 50%;
+    transform: translateY(-50%);
   }
 }
 .cs_footer_widget_menu {
   color: var(--body-color);
   li {
     &:not(:last-child) {
-      margin-bottom: 12px;
+      margin-bottom: 17px;
     }
   }
 }
 .cs_footer_widget_title {
   font-size: 16px;
-  margin-bottom: 20px;
-  font-weight: 700;
+  margin-bottom: 14px;
+  font-weight: 600;
 }
 .cs_footer_row {
   display: flex;
-  gap: 30px 72px;
+  gap: 30px 100px;
   padding: 32px 0;
   @media (max-width: 1199px) {
     gap: 30px 45px;

@@ -10,7 +10,13 @@
 
     .cs_btn.cs_style_1 {
       border: 1px solid #cdd5e0;
-      line-height: 1.19em;
+      line-height: 1.3em;
+      padding: 12px 24px;
+      &:hover {
+        background-color: var(--accent-color);
+        color: var(--white-color);
+        border-color: var(--accent-color);
+      }
     }
   }
 }
@@ -56,21 +62,23 @@
   background-color: #fff;
   .cs_post_info {
     transition: all 0.4s ease;
-    @media (max-width: 1199px) {
-      padding: 24px 25px 30px;
-    }
-    .cs_post_title {
-      margin-top: 8px;
-    }
-    .cs_post_meta {
-      li {
-        font-size: 16px;
-        line-height: 1.625;
+  }
+  .cs_post_title {
+    margin-top: 8px;
+    a {
+      &:hover {
+        color: var(--accent-color);
       }
     }
-    .cs_date {
-      color: #97a3b6;
+  }
+  .cs_post_meta {
+    li {
+      font-size: 16px;
+      line-height: 1.625;
     }
+  }
+  .cs_date {
+    color: #97a3b6;
   }
 
   .cs_post_thumb {
@@ -88,11 +96,7 @@
     }
   }
   &:hover {
-    transform: translateY(-3px);
-    .cs_post_info {
-      box-shadow: 0 50px 30px -40px rgba(0, 0, 0, 0.1);
-      border-color: var(--border-color);
-    }
+    transform: translateY(-5px);
   }
 }
 

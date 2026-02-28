@@ -4,25 +4,27 @@
 .cs_white_bg {
   hr {
     border-color: #e3e8ef;
-    // margin: 64px 0;
   }
-  .cs_testimonial.cs_style_1 {
-    hr {
-      margin-bottom: 32px;
-      border-color: #e3e8ef;
-    }
+}
+.cs_testimonial.cs_style_1 {
+  hr {
+    margin-bottom: 32px;
+    border-color: #e3e8ef;
+  }
 
-    .cs_testimonial_meta {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      img {
-        height: 62px;
-        width: 62px;
-        border-radius: 50%;
-        object-fit: cover;
-      }
+  .cs_testimonial_meta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    img {
+      height: 62px;
+      width: 62px;
+      border-radius: 50%;
+      object-fit: cover;
     }
+  }
+  .cs_testimonial_blockquote {
+    line-height: 1.67em;
   }
 }
 

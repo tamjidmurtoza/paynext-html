@@ -417,9 +417,9 @@
     13. Tabs
   --------------------------------------------------------------*/
   function tabs() {
-    $(".cs-tabs .cs-tab_links a").on("click", function (e) {
+    $(".cs_tabs .cs_tab_links a").on("click", function (e) {
       var currentAttrValue = $(this).attr("href");
-      $(".cs-tabs " + currentAttrValue)
+      $(".cs_tabs " + currentAttrValue)
         .fadeIn(400)
         .siblings()
         .hide();

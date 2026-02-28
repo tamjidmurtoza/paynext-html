@@ -228,9 +228,8 @@
           position: relative;
           height: inherit;
           align-items: center;
-          //color: var(--white-color);
           &:hover {
-            opacity: 0.65;
+            color: rgba(255, 255, 255, 0.6);
           }
         }
 
