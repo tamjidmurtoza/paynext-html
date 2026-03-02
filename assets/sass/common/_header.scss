@@ -215,8 +215,8 @@
       height: inherit;
 
       > li {
-        margin-right: 48px;
         height: inherit;
+        margin-right: 2px;
 
         &:last-child {
           margin-right: 0;
@@ -228,12 +228,13 @@
           position: relative;
           height: inherit;
           align-items: center;
-          &:hover {
-            padding: 8px 24px;
-            border-radius: 30px;
-            background-color: rgba(255, 255, 255, 0.1);
-            color: inherit;
-          }
+        }
+        &.current-menu-item a,
+        > a:hover {
+          padding: 8px 24px;
+          border-radius: 30px;
+          background-color: rgba(255, 255, 255, 0.1);
+          color: inherit;
         }
 
         > ul {
@@ -514,7 +515,7 @@
           color: rgba(255, 255, 255, 0.7);
         }
       }
-      > li {
+      a > li {
         > a {
           font-size: 18px;
           line-height: 22px;

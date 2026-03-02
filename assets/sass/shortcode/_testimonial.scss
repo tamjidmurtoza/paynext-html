@@ -29,59 +29,20 @@
 }
 
 /*-------------------------------------------------
- Counter Section
+ Funfact Section
 ---------------------------------------------------*/
-.cs_counter_wrapper {
+.cs_funfact_wrapper {
   display: grid;
   grid-template-columns: repeat(4, auto);
   justify-content: space-around;
   gap: 20px;
 }
-@media (max-width: 991px) {
-  .cs_counter_wrapper {
-    grid-template-columns: repeat(2, auto);
-    gap: 30px;
-  }
-}
-@media (max-width: 450px) {
-  .cs_counter_wrapper {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-.cs_counter_wrapper.cs_type_1 {
-  border-radius: 0 0 15px 15px;
-  padding: 70px 20px 71px;
-}
-@media (max-width: 1199px) {
-  .cs_counter_wrapper.cs_type_1 {
-    grid-template-columns: repeat(2, auto);
-    gap: 35px 100px;
-    justify-content: center;
-  }
-}
-@media (max-width: 767px) {
-  .cs_counter_wrapper.cs_type_1 {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-.cs_counter_wrapper.cs_type_2 {
-  padding: 91px 20px 88px;
-  justify-content: space-evenly;
-}
 
-.cs_funfact.cs_style_2 {
+.cs_funfact.cs_style_1 {
   display: flex;
   align-items: center;
   gap: 8px;
   .odometer {
     letter-spacing: 1px;
-  }
-}
-.cs_funfact.cs_style_2 .cs_finfact_icon {
-  flex: none;
-}
-@media (max-width: 575px) {
-  .cs_funfact.cs_style_2 {
-    gap: 20px;
   }
 }

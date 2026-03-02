@@ -3,7 +3,9 @@
 ----------------------------------------------------------------*/
 .cs_footer_widget_menu a,
 .cs_footer_links a,
-.cs_post_style_1 .cs_post_title a {
+.cs_post_style_1 .cs_post_title a,
+.cs_contact_info li > a,
+.cs_post_style_2 .cs_card_title a {
   background-repeat: no-repeat;
   background-image: linear-gradient(90deg, currentColor 0, currentColor 100%);
   transition:

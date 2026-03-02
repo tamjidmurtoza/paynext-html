@@ -14,7 +14,7 @@
     }
     font-size: 16px;
     line-height: 1.625em;
-    .cs_type_1 {
+    .cs_btn.cs_style_1 {
       width: 100%;
       background: linear-gradient(
         60deg,
@@ -22,30 +22,29 @@
         rgba(90, 64, 154, 0.7) 86.31%
       );
     }
-    .cs_form_field {
-      display: block;
-      width: 100%;
-      border: 1px solid var(--border-color);
-      background-color: transparent;
-      outline: none;
-      padding: 10px 12px;
-      resize: none;
-      margin-bottom: 0;
-      color: var(--body-color);
-    }
   }
 }
 
 .cs_contact_info {
   list-style: none;
-  margin-bottom: 32px;
   padding: 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
+  margin: 0;
+  a {
+    &:hover {
+      color: var(--accent-color);
+    }
+  }
   .cs_social_btns.cs_style_1 {
     a {
+      color: var(--accent-color);
       background-color: var(--gray-color-2);
+      &:hover {
+        color: #fff;
+        background-color: var(--accent-color);
+      }
     }
   }
 }
