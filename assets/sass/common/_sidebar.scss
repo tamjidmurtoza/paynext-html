@@ -76,6 +76,9 @@
   li {
     &:not(:last-child) {
       margin-bottom: 24px;
+      @media (max-width: 991px) {
+        margin-bottom: 12px;
+      }
     }
   }
 }

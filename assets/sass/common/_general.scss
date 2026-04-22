@@ -54,9 +54,6 @@
     font-size: 32px;
     line-height: 1.25em;
   }
-  @media (max-width: 575px) {
-    font-size: 28px;
-  }
 }
 .cs_fs_62 {
   font-size: 62px;
@@ -67,6 +64,10 @@
   }
   @media (max-width: 1199px) {
     font-size: 50px;
+    letter-spacing: -1px;
+  }
+  @media (max-width: 575px) {
+    font-size: 42px;
     letter-spacing: -1px;
   }
 }
@@ -87,11 +88,8 @@
     font-size: 46px;
     line-height: 1.18em;
   }
-  @media (max-width: 767px) {
-    font-size: 38px;
-  }
   @media (max-width: 575px) {
-    font-size: 32px;
+    font-size: 42px;
     line-height: 1.25em;
     letter-spacing: 0px;
   }
@@ -218,22 +216,37 @@
 
 .cs_gap_y_35 {
   gap: 35px 0;
+  @media (max-width: 991px) {
+    gap: 30px 0;
+  }
 }
 
 .cs_gap_y_40 {
   gap: 40px 0;
+  @media (max-width: 991px) {
+    gap: 30px 0;
+  }
 }
 
 .cs_gap_y_45 {
   gap: 45px 0;
+  @media (max-width: 991px) {
+    gap: 30px 0;
+  }
 }
 
 .cs_gap_y_50 {
   gap: 50px 0;
+  @media (max-width: 991px) {
+    gap: 30px 0;
+  }
 }
 
 .cs_gap_y_60 {
   gap: 60px 0;
+  @media (max-width: 991px) {
+    gap: 30px 0;
+  }
 }
 
 .cs_gap_y_64 {
@@ -258,36 +271,38 @@
   gap: 100px 0;
 }
 
-.cs_gap_x_32 {
-  margin-left: -16px;
-  margin-right: -16px;
-  > * {
-    padding-left: 16px;
-    padding-right: 16px;
+@media (min-width: 1200px) {
+  .cs_gap_x_32 {
+    margin-left: -16px;
+    margin-right: -16px;
+    > * {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
   }
-}
-.cs_gap_x_40 {
-  margin-left: -20px;
-  margin-right: -20px;
-  > * {
-    padding-left: 20px;
-    padding-right: 20px;
+  .cs_gap_x_40 {
+    margin-left: -20px;
+    margin-right: -20px;
+    > * {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
   }
-}
-.cs_gap_x_50 {
-  margin-left: -25px;
-  margin-right: -25px;
-  > * {
-    padding-left: 25px;
-    padding-right: 25px;
+  .cs_gap_x_50 {
+    margin-left: -25px;
+    margin-right: -25px;
+    > * {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
   }
-}
-.cs_gap_x_64 {
-  margin-left: -32px;
-  margin-right: -32px;
-  > * {
-    padding-left: 32px;
-    padding-right: 32px;
+  .cs_gap_x_64 {
+    margin-left: -32px;
+    margin-right: -32px;
+    > * {
+      padding-left: 32px;
+      padding-right: 32px;
+    }
   }
 }
 

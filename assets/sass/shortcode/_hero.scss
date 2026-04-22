@@ -116,7 +116,12 @@
 
   &.cs_type_1 {
     .cs_hero_in {
-      padding-top: 64px;
+      padding-top: 170px;
+      padding-bottom: 100px;
+      @media (max-width: 991px) {
+        padding-top: 130px;
+        padding-bottom: 70px;
+      }
     }
   }
 }

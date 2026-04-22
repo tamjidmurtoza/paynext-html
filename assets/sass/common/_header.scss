@@ -138,6 +138,14 @@
     }
   }
   &.cs_color_2 {
+    .cs_menu_toggle {
+      color: var(--heading-color);
+    }
+    .cs_active {
+      + .cs_menu_toggle {
+        color: #fff;
+      }
+    }
     &.cs_sticky_active {
       background-color: var(--white-color);
       box-shadow: 0 10px 10px -10px rgb(55 72 54 / 6%);

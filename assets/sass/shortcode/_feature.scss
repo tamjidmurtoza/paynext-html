@@ -24,6 +24,9 @@
     }
     &:nth-child(2n + 2) {
       flex-direction: column-reverse;
+      @media (max-width: 575px) {
+        flex-direction: column;
+      }
     }
     &:nth-child(4) {
       .cs_feature_card_thumb {
