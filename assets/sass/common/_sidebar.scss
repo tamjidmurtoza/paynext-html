@@ -161,4 +161,11 @@
 }
 .cs_right_sidebar {
   padding-left: 64px;
+  @media (max-width: 1199px) {
+    padding-left: 32px;
+  }
+  @media (max-width: 991px) {
+    padding-left: 0;
+    margin-top: 48px;
+  }
 }

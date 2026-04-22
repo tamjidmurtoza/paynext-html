@@ -24,6 +24,8 @@
   | 11. Dynamic contact form
   | 12. Counter Animation
   | 13. Tabs
+  | 14. Hero Parallax
+  | 15. CTA Scroll Zoom
   |
   */
 
@@ -52,6 +54,8 @@
     isotopInit();
     tabs();
     workflowAnimation();
+    heroParallax();
+    ctaScrollZoom();
     if ($.exists(".wow")) {
       new WOW().init();
     }
@@ -478,5 +482,180 @@
 
     // Start the cycle
     startCycle();
+  }
+
+  /*--------------------------------------------------------------
+    14. Hero Parallax
+  --------------------------------------------------------------*/
+  function heroParallax() {
+    var $hero = $(".cs_hero.cs_style_1");
+    if (!$hero.length) return;
+
+    var $sm1 = $hero.find(".cs_hero_thumb_sm_1");
+    var $sm2 = $hero.find(".cs_hero_thumb_sm_2");
+    if (!$sm1.length && !$sm2.length) return;
+
+    var targetX1 = 0,
+      targetY1 = 0,
+      targetR1 = 0;
+    var targetX2 = 0,
+      targetY2 = 0,
+      targetR2 = 0;
+    var currentX1 = 0,
+      currentY1 = 0,
+      currentR1 = 0;
+    var currentX2 = 0,
+      currentY2 = 0,
+      currentR2 = 0;
+    var ease = 0.08;
+    var rafId = null;
+    var enabled = window.innerWidth > 991;
+
+    function updateTargets() {
+      if (!enabled) {
+        targetX1 = targetY1 = targetR1 = 0;
+        targetX2 = targetY2 = targetR2 = 0;
+        return;
+      }
+      var scrollY =
+        window.pageYOffset || document.documentElement.scrollTop || 0;
+      var heroHeight = $hero.outerHeight() || 1;
+      // Progress clamped to [0, 1.2] so elements keep easing out past the hero
+      var progress = Math.min(Math.max(scrollY / heroHeight, 0), 1.2);
+      // Left card: slide up and further left
+      targetX1 = -progress * 180;
+      targetY1 = -progress * 260;
+      targetR1 = -progress * 8;
+      // Right card: slide up and further right
+      targetX2 = progress * 180;
+      targetY2 = -progress * 260;
+      targetR2 = progress * 8;
+    }
+
+    function animate() {
+      currentX1 += (targetX1 - currentX1) * ease;
+      currentY1 += (targetY1 - currentY1) * ease;
+      currentR1 += (targetR1 - currentR1) * ease;
+      currentX2 += (targetX2 - currentX2) * ease;
+      currentY2 += (targetY2 - currentY2) * ease;
+      currentR2 += (targetR2 - currentR2) * ease;
+
+      $sm1.css(
+        "transform",
+        "translate3d(" +
+          currentX1.toFixed(2) +
+          "px, " +
+          currentY1.toFixed(2) +
+          "px, 0) rotate(" +
+          currentR1.toFixed(2) +
+          "deg)",
+      );
+      $sm2.css(
+        "transform",
+        "translate3d(" +
+          currentX2.toFixed(2) +
+          "px, " +
+          currentY2.toFixed(2) +
+          "px, 0) rotate(" +
+          currentR2.toFixed(2) +
+          "deg)",
+      );
+
+      var settled =
+        Math.abs(targetX1 - currentX1) < 0.05 &&
+        Math.abs(targetY1 - currentY1) < 0.05 &&
+        Math.abs(targetR1 - currentR1) < 0.05 &&
+        Math.abs(targetX2 - currentX2) < 0.05 &&
+        Math.abs(targetY2 - currentY2) < 0.05 &&
+        Math.abs(targetR2 - currentR2) < 0.05;
+
+      if (settled) {
+        rafId = null;
+      } else {
+        rafId = requestAnimationFrame(animate);
+      }
+    }
+
+    function kick() {
+      updateTargets();
+      if (rafId === null) {
+        rafId = requestAnimationFrame(animate);
+      }
+    }
+
+    $(window).on("scroll", kick);
+    $(window).on("resize", function () {
+      enabled = window.innerWidth > 991;
+      kick();
+    });
+
+    kick();
+  }
+
+  /*--------------------------------------------------------------
+    15. CTA Scroll Zoom
+  --------------------------------------------------------------*/
+  function ctaScrollZoom() {
+    var $cta = $(".cs_cta_scroll");
+    if (!$cta.length) return;
+
+    // Initial "zoomed out" state: slightly wider than container.
+    var startScale = 1.1;
+    var rafId = null;
+    var targetProgress = 0;
+    var currentProgress = 0;
+    var ease = 0.1;
+    var enabled = window.innerWidth > 991;
+
+    function computeProgress() {
+      if (!enabled) return 1;
+      var rect = $cta[0].getBoundingClientRect();
+      var vh = window.innerHeight || document.documentElement.clientHeight;
+      var elCenter = rect.top + rect.height / 2;
+      var viewportCenter = vh / 2;
+      var dist = elCenter - viewportCenter;
+      var p = 1 - dist / (vh / 2);
+      if (p < 0) p = 0;
+      if (p > 1) p = 1;
+      return p;
+    }
+
+    function apply() {
+      if (!enabled) {
+        $cta.css({ transform: "" });
+        return;
+      }
+      var inv = 1 - currentProgress;
+      var scale = 1 + (startScale - 1) * inv;
+      $cta.css({
+        transform: "scale(" + scale.toFixed(4) + ")",
+      });
+    }
+
+    function animate() {
+      currentProgress += (targetProgress - currentProgress) * ease;
+      apply();
+      if (Math.abs(targetProgress - currentProgress) > 0.001) {
+        rafId = requestAnimationFrame(animate);
+      } else {
+        currentProgress = targetProgress;
+        apply();
+        rafId = null;
+      }
+    }
+
+    function kick() {
+      targetProgress = computeProgress();
+      if (rafId === null) {
+        rafId = requestAnimationFrame(animate);
+      }
+    }
+
+    $(window).on("scroll", kick);
+    $(window).on("resize", function () {
+      enabled = window.innerWidth > 991;
+      kick();
+    });
+    kick();
   }
 })(jQuery); // End of use strict

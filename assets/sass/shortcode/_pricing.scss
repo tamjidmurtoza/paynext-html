@@ -50,6 +50,12 @@
     letter-spacing: 0.1px;
     background-color: #def5ed;
     color: #049f6c;
+    white-space: nowrap;
+    flex-shrink: 0;
+    line-height: 1.4;
+    .cs_offer {
+      white-space: nowrap;
+    }
   }
   hr {
     margin-top: 0;
@@ -101,7 +107,15 @@
   .cs_price_value {
     display: flex;
     align-items: flex-end;
-    gap: 6px;
+    flex-wrap: wrap;
+    gap: 6px 10px;
+    @media (max-width: 1199px) {
+      .cs_offer_badge {
+        flex-basis: 100%;
+        margin-left: 0;
+        align-self: flex-start;
+      }
+    }
   }
 
   &:hover {

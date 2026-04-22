@@ -3,6 +3,8 @@
 ----------------------------------------------------------------*/
 .cs_cta.cs_style_1 {
   border-radius: 32px;
+  transform-origin: center center;
+  will-change: transform, border-radius;
   .cs_badge {
     border: 1px solid rgba(255, 255, 255, 0.15);
     background-color: rgba(255, 255, 255, 0.1);
@@ -19,6 +21,19 @@
   padding: 0 60px;
   display: flex;
   gap: 60px;
+  @media (max-width: 1199px) {
+    padding: 0 40px;
+    gap: 32px;
+  }
+  @media (max-width: 991px) {
+    flex-direction: column;
+    padding: 40px 32px;
+    gap: 32px;
+  }
+  @media (max-width: 575px) {
+    padding: 32px 20px;
+    border-radius: 20px;
+  }
   .cs_contact_img {
     max-width: 340px;
     width: 100%;
@@ -27,6 +42,11 @@
     display: flex;
     align-items: flex-end;
     flex: none;
+    @media (max-width: 991px) {
+      max-width: 100%;
+      padding-top: 0;
+      justify-content: center;
+    }
     .cs_img_outline {
       padding: 10px 8px 0;
       border: 1px solid rgb(255, 255, 255, 0.5);
@@ -41,6 +61,10 @@
     display: flex;
     align-items: center;
     padding: 64px 0;
+    @media (max-width: 991px) {
+      max-width: 100%;
+      padding: 0;
+    }
   }
   .cs_cta_right {
     flex: 1;
@@ -48,6 +72,9 @@
     display: flex;
     align-items: center;
     padding: 64px 0;
+    @media (max-width: 991px) {
+      padding: 0;
+    }
   }
   .cs_address {
     display: flex;

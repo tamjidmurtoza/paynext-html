@@ -1,5 +1,8 @@
 .cs_workflow_wrap {
   padding-left: 40px;
+  @media (max-width: 991px) {
+    padding-left: 0;
+  }
   .cs_iconbox {
     position: relative;
     padding-bottom: 52px;
@@ -60,6 +63,6 @@
   }
 
   to {
-    transform: scale(1.2);
+    transform: scale(1.25);
   }
 }

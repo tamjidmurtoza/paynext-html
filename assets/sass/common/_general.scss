@@ -1,6 +1,7 @@
 /*--------------------------------------------------------------
   4. General
 ----------------------------------------------------------------*/
+
 @media (min-width: 1400px) {
   .container,
   .container-lg,
@@ -30,25 +31,43 @@
 .cs_fs_24 {
   font-size: 24px;
   line-height: 1.33em;
-  @media (max-width: 1400px) {
+  @media (max-width: 1199px) {
     font-size: 22px;
   }
 }
 .cs_fs_32 {
   font-size: 32px;
   line-height: 1.25em;
+  @media (max-width: 1199px) {
+    font-size: 28px;
+  }
 }
 .cs_fs_48 {
   font-size: 48px;
   line-height: 1.21em;
   letter-spacing: -1px;
+  @media (max-width: 1199px) {
+    font-size: 40px;
+    letter-spacing: 0px;
+  }
+  @media (max-width: 767px) {
+    font-size: 32px;
+    line-height: 1.25em;
+  }
+  @media (max-width: 575px) {
+    font-size: 28px;
+  }
 }
 .cs_fs_62 {
   font-size: 62px;
   line-height: 1.113em;
   letter-spacing: -2px;
-  small {
+  > * {
     letter-spacing: 0;
+  }
+  @media (max-width: 1199px) {
+    font-size: 50px;
+    letter-spacing: -1px;
   }
 }
 
@@ -56,6 +75,26 @@
   font-size: 72px;
   line-height: 1.14em;
   letter-spacing: -2px;
+  @media (max-width: 1400px) {
+    font-size: 62px;
+    letter-spacing: -1px;
+  }
+  @media (max-width: 1199px) {
+    font-size: 56px;
+    letter-spacing: -1px;
+  }
+  @media (max-width: 991px) {
+    font-size: 46px;
+    line-height: 1.18em;
+  }
+  @media (max-width: 767px) {
+    font-size: 38px;
+  }
+  @media (max-width: 575px) {
+    font-size: 32px;
+    line-height: 1.25em;
+    letter-spacing: 0px;
+  }
 }
 
 .cs_light {
@@ -118,6 +157,7 @@
   padding-left: 40px;
   @media (max-width: 991px) {
     padding-left: 0;
+    margin-top: 40px;
   }
 }
 
@@ -409,9 +449,18 @@ hr {
   border-radius: 1.6em;
   color: var(--heading-color);
   background-color: var(--white-color);
+  text-shadow: 0 50px 0 currentColor;
+  overflow: hidden;
+  transition: all 0.8s ease;
+  span {
+    transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
   &:hover {
     transform: translateY(-2px);
     background-color: rgba(255, 255, 255, 0.8);
+    span {
+      transform: translateY(-50px);
+    }
   }
   &.cs_type_1 {
     color: var(--white-color);
@@ -454,4 +503,9 @@ hr {
 }
 .breadcrumb-item.active {
   color: var(--accent-color);
+}
+@media (max-width: 991px) {
+  .cs_mb_32 {
+    margin-bottom: 24px;
+  }
 }

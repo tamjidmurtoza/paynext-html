@@ -115,6 +115,11 @@
     @media (max-width: 1199px) {
       padding-right: 50px;
     }
+    @media (max-width: 991px) {
+      .cs_btn.cs_style_1 {
+        display: none;
+      }
+    }
   }
 }
 
