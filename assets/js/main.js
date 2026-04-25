@@ -2,43 +2,38 @@
   "use strict";
 
   /*
-  |--------------------------------------------------------------------------
+  |========================================================------------
   | Template Name: Paynext
   | Author: Peterdraw
   | Version: 1.0.0
-  |--------------------------------------------------------------------------
-  |--------------------------------------------------------------------------
+  |========================================================------------
+  |========================================================------------
   | TABLE OF CONTENTS:
-  |--------------------------------------------------------------------------
+  |========================================================------------
   |
   | 1. Preloader
   | 2. Mobile Menu
   | 3. Sticky Header
   | 4. Dynamic Background
   | 5. Slick Slider
-  | 6. Modal Video
-  | 7. Accordian
-  | 8. Light Gallery
-  | 9. Hover To Active
-  | 10. Isotop
-  | 11. Dynamic contact form
-  | 12. Counter Animation
-  | 13. Tabs
-  | 14. Hero Parallax
-  | 15. CTA Scroll Zoom
+  | 6. Dynamic contact form
+  | 7. Counter Animation
+  | 8. Tabs
+  | 9. Workflow
+  | 10. Hero Parallax
+  | 11. CTA Scroll Zoom
   |
   */
 
-  /*--------------------------------------------------------------
+  /*========================================================
     Scripts initialization
-  --------------------------------------------------------------*/
+  ========================================================*/
   $.exists = function (selector) {
     return $(selector).length > 0;
   };
 
   $(window).on("load", function () {
     preloader();
-    isotopInit();
   });
 
   $(function () {
@@ -47,11 +42,6 @@
     dynamicBackground();
     counterInit();
     slickInit();
-    modalVideo();
-    accordian();
-    lightGallery();
-    hoverActive();
-    isotopInit();
     tabs();
     workflowAnimation();
     heroParallax();
@@ -65,17 +55,16 @@
     stickyHeader();
   });
 
-  /*--------------------------------------------------------------
+  /*======================================================
     1. Preloader
-  --------------------------------------------------------------*/
+  ========================================================*/
   function preloader() {
     $(".cs_preloader").fadeOut();
-    $("cs_preloader_in").delay(150).fadeOut("slow");
+    $(".cs_preloader_in").delay(150).fadeOut("slow");
   }
-
-  /*--------------------------------------------------------------
+  /*======================================================
     2. Mobile Menu
-  --------------------------------------------------------------*/
+  ========================================================*/
   function mainNav() {
     $(".cs_nav").append('<span class="cs_menu_toggle"><span></span></span>');
     $(".menu-item-has-children").append(
@@ -99,10 +88,9 @@
       $(".cs_header_form_wrap").removeClass("active");
     });
   }
-
-  /*--------------------------------------------------------------
+  /*======================================================
     3. Sticky Header
-  --------------------------------------------------------------*/
+  ========================================================*/
   function stickyHeader() {
     var scroll = $(window).scrollTop();
     if (scroll >= 10) {
@@ -111,10 +99,9 @@
       $(".cs_sticky_header").removeClass("cs_sticky_active");
     }
   }
-
-  /*--------------------------------------------------------------
+  /*======================================================
     4. Dynamic Background
-  --------------------------------------------------------------*/
+  ========================================================*/
   function dynamicBackground() {
     $("[data-src]").each(function () {
       var src = $(this).attr("data-src");
@@ -123,10 +110,9 @@
       });
     });
   }
-
-  /*--------------------------------------------------------------
+  /*======================================================
     5. Slick Slider
-  --------------------------------------------------------------*/
+  ========================================================*/
   function slickInit() {
     if ($.exists(".cs_slider")) {
       $(".cs_slider").each(function () {
@@ -228,128 +214,9 @@
       });
     }
   }
-
-  /*--------------------------------------------------------------
-    6. Modal Video
-  --------------------------------------------------------------*/
-  function modalVideo() {
-    if ($.exists(".cs_video_open")) {
-      $("body").append(`
-        <div class="cs_video_popup">
-          <div class="cs_video_popup-overlay"></div>
-          <div class="cs_video_popup-content">
-            <div class="cs_video_popup-layer"></div>
-            <div class="cs_video_popup-container">
-              <div class="cs_video_popup-align">
-                <div class="embed-responsive embed-responsive-16by9">
-                  <iframe class="embed-responsive-item" src="about:blank"></iframe>
-                </div>
-              </div>
-              <div class="cs_video_popup-close"></div>
-            </div>
-          </div>
-        </div>
-      `);
-      $(document).on("click", ".cs_video_open", function (e) {
-        e.preventDefault();
-        var video = $(this).attr("href");
-
-        $(".cs_video_popup-container iframe").attr("src", `${video}`);
-
-        $(".cs_video_popup").addClass("active");
-      });
-      $(".cs_video_popup-close, .cs_video_popup-layer").on(
-        "click",
-        function (e) {
-          $(".cs_video_popup").removeClass("active");
-          $("html").removeClass("overflow-hidden");
-          $(".cs_video_popup-container iframe").attr("src", "about:blank");
-          e.preventDefault();
-        },
-      );
-    }
-  }
-
-  /*--------------------------------------------------------------
-    7. Accordian
-  --------------------------------------------------------------*/
-  function accordian() {
-    $(".cs_accordian").children(".cs_accordian_body").hide();
-    $(".cs_accordian.active").children(".cs_accordian_body").show();
-    $(".cs_accordian_head").on("click", function () {
-      $(this)
-        .parent(".cs_accordian")
-        .siblings()
-        .children(".cs_accordian_body")
-        .slideUp(250);
-      $(this).siblings().slideDown(250);
-      $(this)
-        .parent()
-        .parent()
-        .siblings()
-        .find(".cs_accordian_body")
-        .slideUp(250);
-      /* Accordian Active Class */
-      $(this).parents(".cs_accordian").addClass("active");
-      $(this).parent(".cs_accordian").siblings().removeClass("active");
-    });
-  }
-
-  /*--------------------------------------------------------------
-    8. Light Gallery
-  --------------------------------------------------------------*/
-  function lightGallery() {
-    $(".cs_lightgallery").each(function () {
-      $(this).lightGallery({
-        selector: ".cs_gallery_item",
-        subHtmlSelectorRelative: false,
-        thumbnail: false,
-        mousewheel: true,
-      });
-    });
-  }
-
-  /*--------------------------------------------------------------
-    9. Hover To Active
-  --------------------------------------------------------------*/
-  function hoverActive() {
-    $(".cs_hover_active").hover(function () {
-      $(this).addClass("active").siblings().removeClass("active");
-    });
-  }
-
-  /*--------------------------------------------------------------
-    10. Isotop
-  --------------------------------------------------------------*/
-  function isotopInit() {
-    if ($.exists(".cs_isotop")) {
-      $(".cs_isotop").isotope({
-        itemSelector: ".cs_isotop_item",
-        transitionDuration: "0.60s",
-        percentPosition: true,
-        masonry: {
-          columnWidth: ".cs_grid_sizer",
-        },
-      });
-      /* Active Class of Portfolio*/
-      $(".cs_isotop_filter ul li").on("click", function (event) {
-        $(this).siblings(".active").removeClass("active");
-        $(this).addClass("active");
-        event.preventDefault();
-      });
-      /*=== Portfolio filtering ===*/
-      $(".cs_isotop_filter ul").on("click", "a", function () {
-        var filterElement = $(this).attr("data-filter");
-        $(".cs_isotop").isotope({
-          filter: filterElement,
-        });
-      });
-    }
-  }
-
-  /*--------------------------------------------------------------
-    11. Dynamic contact form
-  --------------------------------------------------------------*/
+  /*======================================================
+    6. Dynamic contact form
+  ========================================================*/
   if ($.exists("#cs_form")) {
     const form = document.getElementById("cs_form");
     const result = document.getElementById("cs_result");
@@ -393,33 +260,34 @@
         });
     });
   }
-
-  /*--------------------------------------------------------------
-    12. Counter Animation
-  --------------------------------------------------------------*/
+  /*======================================================
+    7. Counter Animation
+  ========================================================*/
   function counterInit() {
-    if ($.exists(".odometer")) {
-      $(window).on("scroll", function () {
-        function winScrollPosition() {
-          var scrollPos = $(window).scrollTop(),
-            winHeight = $(window).height();
-          var scrollPosition = Math.round(scrollPos + winHeight / 1.2);
-          return scrollPosition;
-        }
+    if (!$.exists(".odometer")) return;
 
-        $(".odometer").each(function () {
-          var elemOffset = $(this).offset().top;
-          if (elemOffset < winScrollPosition()) {
-            $(this).html($(this).data("count-to"));
+    const observer = new IntersectionObserver(
+      function (entries, observer) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            const el = $(entry.target);
+            el.html(el.data("count-to"));
+            observer.unobserve(entry.target);
           }
         });
-      });
-    }
-  }
+      },
+      {
+        threshold: 0.3,
+      },
+    );
 
-  /*--------------------------------------------------------------
-    13. Tabs
-  --------------------------------------------------------------*/
+    $(".odometer").each(function () {
+      observer.observe(this);
+    });
+  }
+  /*======================================================
+    8. Tabs
+  ========================================================*/
   function tabs() {
     $(".cs_tabs .cs_tab_links a").on("click", function (e) {
       var currentAttrValue = $(this).attr("href");
@@ -431,62 +299,55 @@
       e.preventDefault();
     });
   }
-
-  /*--------------------------------------------------------------
-    13. Tabs
-  --------------------------------------------------------------*/
+  /*======================================================
+    9. Workflow
+  ========================================================*/
   function workflowAnimation() {
-    // Get all cs_iconbox elements
     var $items = $(".cs_workflow_wrap .cs_iconbox");
+    if (!$items.length) return;
+
     var currentIndex = 0;
     var totalItems = $items.length;
-    var interval;
+    var interval = null;
+    var timeout = null;
+    var isActive = true;
 
     function activateNextItem() {
-      // Add active class to current item without removing previous ones
+      if (!isActive) return;
       $items.eq(currentIndex).addClass("active");
-
-      // Increment index
       currentIndex++;
 
-      // If we've reached the end
       if (currentIndex >= totalItems) {
-        // Clear the current interval
-        clearInterval(interval);
-
-        // Wait 5 seconds, then remove all active classes
-        setTimeout(function () {
+        if (interval) clearInterval(interval);
+        timeout = setTimeout(function () {
           $items.removeClass("active");
-
-          // Reset index
           currentIndex = 0;
-
-          // Wait another 5 seconds, then restart the cycle
-          setTimeout(function () {
-            startCycle();
+          timeout = setTimeout(function () {
+            if (isActive) startCycle();
           }, 2000);
         }, 2000);
       }
     }
 
     function startCycle() {
-      // Reset index if needed
+      if (interval) clearInterval(interval);
       currentIndex = 0;
-
-      // Start the interval
       interval = setInterval(activateNextItem, 2000);
-
-      // Activate first item immediately
       activateNextItem();
     }
 
-    // Start the cycle
     startCycle();
-  }
 
-  /*--------------------------------------------------------------
-    14. Hero Parallax
-  --------------------------------------------------------------*/
+    // Cleanup function if needed
+    return function () {
+      isActive = false;
+      if (interval) clearInterval(interval);
+      if (timeout) clearTimeout(timeout);
+    };
+  }
+  /*======================================================
+    10. Hero Parallax
+  ========================================================*/
   function heroParallax() {
     var $hero = $(".cs_hero.cs_style_1");
     if (!$hero.length) return;
@@ -591,10 +452,9 @@
 
     kick();
   }
-
-  /*--------------------------------------------------------------
-    15. CTA Scroll Zoom
-  --------------------------------------------------------------*/
+  /*======================================================
+    11. CTA Scroll Zoom
+  ========================================================*/
   function ctaScrollZoom() {
     var $cta = $(".cs_cta_scroll");
     if (!$cta.length) return;

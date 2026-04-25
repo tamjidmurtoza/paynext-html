@@ -1,3 +1,6 @@
+/*--------------------------------------------------------------
+  20. Features
+----------------------------------------------------------------*/
 .cs_feature_cards_wrapper {
   display: grid;
   gap: 24px;
@@ -5,9 +8,11 @@
   @media (min-width: 992px) {
     grid-template-columns: repeat(12, 1fr);
   }
+
   .cs_feature_card {
     @media (min-width: 992px) {
       grid-column: auto / span 4;
+
       &:nth-child(4n + 4),
       &:nth-child(4n + 5) {
         grid-column: auto / span 6;
@@ -16,55 +21,68 @@
 
     &:not(:first-child):nth-child(odd) {
       padding-bottom: 0;
+
       .cs_feature_card_thumb {
         .cs_lg_img {
           border-radius: 12px 12px 0 0;
         }
       }
     }
+
     &:nth-child(2n + 2) {
       flex-direction: column-reverse;
+
       @media (max-width: 575px) {
         flex-direction: column;
       }
     }
+
     &:nth-child(4) {
       .cs_feature_card_thumb {
         max-width: 528px;
         display: flex;
         flex-direction: column-reverse;
       }
+
       .cs_feature_card_thumb_item {
         position: relative;
+
         &:nth-child(3) {
           padding: 0 9%;
           margin-bottom: -22px;
         }
+
         &:nth-child(2) {
           padding: 0 4.2%;
           z-index: 2;
           margin-bottom: -22px;
         }
+
         &:nth-child(1) {
           z-index: 3;
         }
       }
     }
   }
+
   &.cs_type_1 {
     .cs_feature_card {
       &:nth-child(1) {
         padding-bottom: 0;
+
         .cs_feature_card_thumb {
           .cs_lg_img {
             border-radius: 12px 12px 0 0;
           }
         }
       }
+
       &:nth-child(3) {
         justify-content: flex-end;
+
         .cs_feature_card_thumb {
           position: relative;
+
           &::before {
             content: "";
             position: absolute;
@@ -76,6 +94,7 @@
             transform: rotate(-4.47deg);
             border-radius: 12px 12px 0 0;
           }
+
           img {
             position: relative;
             z-index: 2;
@@ -85,6 +104,7 @@
     }
   }
 }
+
 .cs_feature_card {
   padding: 32px;
   border-radius: 24px;
@@ -92,29 +112,36 @@
   flex-direction: column;
   gap: 32px;
   align-items: center;
+
   @media (max-width: 767px) {
     padding: 24px;
     gap: 24px;
   }
+
   @media (max-width: 575px) {
     padding: 20px;
   }
+
   .cs_feature_card_text {
     max-width: 470px;
   }
+
   .cs_feature_card_thumb {
     max-width: 470px;
     width: 100%;
+
     .cs_lg_img {
       width: 100%;
       box-shadow: 21px 28px 66px 0 rgba(52, 20, 139, 0.11);
       border-radius: 12px;
     }
+
     .cs_mini_img {
       position: absolute;
       right: -17px;
       top: -32px;
       z-index: 1;
+
       @media (max-width: 575px) {
         right: 0;
         top: -20px;

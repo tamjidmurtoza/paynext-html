@@ -1,5 +1,5 @@
 /*--------------------------------------------------------------
-  2. Preloader
+  04. Preloader
 ----------------------------------------------------------------*/
 .cs_preloader {
   position: fixed;
@@ -9,6 +9,7 @@
   bottom: 0;
   background-color: var(--gray-color);
   z-index: 99999;
+
   &::before {
     content: '';
     position: absolute;
@@ -19,20 +20,24 @@
     background-color: var(--heading-color);
     opacity: 0.08;
   }
+
   .cs_preloader_shape {
     position: absolute;
     right: 0;
     bottom: 0;
     z-index: 1;
+
     @media (max-width: 991px) {
       display: none;
     }
   }
+
   .cs_preloader_shape_2 {
     position: absolute;
     left: 0;
     bottom: 0;
     z-index: 1;
+
     @media (max-width: 991px) {
       display: none;
     }
@@ -71,14 +76,17 @@
 }
 
 @keyframes ballPulseDouble {
+
   0%,
   100% {
     transform: scale(0);
   }
+
   50% {
     transform: scale(1);
   }
 }
+
 .cs_preloader_text {
   position: fixed;
   bottom: 30px;

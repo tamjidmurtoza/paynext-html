@@ -1,56 +1,70 @@
 /*--------------------------------------------------------------
-  10. Hero
+  11. Hero
 ----------------------------------------------------------------*/
 .cs_hero.cs_style_1 {
   .cs_hero_in {
     padding: 164px 0 64px;
+
     @media (max-width: 1199px) {
       padding: 140px 0 64px;
     }
+
     @media (max-width: 991px) {
       text-align: center;
       padding: 140px 0 0px;
     }
   }
+
   .cs_hero_text {
     max-width: 660px;
   }
+
   .cs_badge {
     background-color: rgba(255, 255, 255, 0.1);
     box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.15);
   }
+
   .cs_hero_title {
     max-width: 620px;
+
     @media (max-width: 1400px) {
       max-width: 550px;
     }
+
     @media (max-width: 1199px) {
       max-width: 495px;
     }
+
     @media (max-width: 991px) {
       max-width: 100%;
     }
   }
+
   .cs_hero_brands {
     display: flex;
     margin-top: 120px;
     gap: 15px 26px;
+
     @media (max-width: 1400px) {
       margin-top: 70px;
     }
+
     @media (max-width: 1199px) {
       margin-top: 50px;
     }
+
     @media (max-width: 991px) {
       justify-content: center;
       margin-top: 32px;
     }
   }
+
   .cs_hero_thumb {
     position: absolute;
     right: 0;
     bottom: 0;
     width: 33.7%;
+
     @media (max-width: 991px) {
       width: 48%;
       position: relative;
@@ -59,6 +73,7 @@
       margin-top: 32px;
     }
   }
+
   .cs_hero_thumb_sm_1 {
     position: absolute;
     top: 83px;
@@ -66,22 +81,26 @@
     width: 58%;
     will-change: transform;
     transform: translate3d(0, 0, 0);
+
     @media (max-width: 1199px) {
       left: -20%;
       width: 50%;
       top: 40px;
     }
+
     @media (max-width: 991px) {
       left: 0;
       top: 20px;
       width: 45%;
     }
+
     @media (max-width: 575px) {
       width: 50%;
       top: 10px;
       left: -10px;
     }
   }
+
   .cs_hero_thumb_sm_2 {
     position: absolute;
     right: -30%;
@@ -89,25 +108,30 @@
     width: 55%;
     will-change: transform;
     transform: translate3d(0, 0, 0);
+
     @media (max-width: 1199px) {
       right: -18%;
       width: 50%;
     }
+
     @media (max-width: 991px) {
       right: 0;
       width: 45%;
       bottom: 10px;
     }
+
     @media (max-width: 575px) {
       width: 50%;
       right: -10px;
     }
   }
+
   @media (max-width: 1199px) {
     .cs_hero_subtitle {
       max-width: 450px;
     }
   }
+
   @media (max-width: 991px) {
     .cs_hero_subtitle {
       max-width: 100%;
@@ -118,6 +142,7 @@
     .cs_hero_in {
       padding-top: 170px;
       padding-bottom: 100px;
+
       @media (max-width: 991px) {
         padding-top: 130px;
         padding-bottom: 70px;

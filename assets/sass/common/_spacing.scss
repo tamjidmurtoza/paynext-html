@@ -1,11 +1,12 @@
 /*--------------------------------------------------------------
-  3. Spacing
+  05. Spacing
 ----------------------------------------------------------------*/
 @for $i from 1 through 60 {
   .cs_mb_#{$i} {
     margin-bottom: $i + px;
   }
 }
+
 @media screen and (min-width: 992px) {
   @for $i from 1 through 150 {
     .cs_height_#{$i} {
@@ -20,6 +21,7 @@
       margin-bottom: $i + px;
     }
   }
+
   @for $i from 1 through 150 {
     .cs_height_lg_#{$i} {
       height: $i + px;

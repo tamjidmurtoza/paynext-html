@@ -1,8 +1,9 @@
 /*--------------------------------------------------------------
-  4. General
+  06. General
 ----------------------------------------------------------------*/
 
 @media (min-width: 1400px) {
+
   .container,
   .container-lg,
   .container-md,
@@ -12,60 +13,75 @@
     max-width: 1336px;
   }
 }
+
 .cs_fs_14 {
   font-size: 14px;
   line-height: 1.86em;
 }
+
 .cs_fs_16 {
   font-size: 16px;
   line-height: 1.625em;
 }
+
 .cs_fs_18 {
   font-size: 18px;
   line-height: 1.44em;
 }
+
 .cs_fs_20 {
   font-size: 20px;
   line-height: 1.5em;
 }
+
 .cs_fs_24 {
   font-size: 24px;
   line-height: 1.33em;
+
   @media (max-width: 1199px) {
     font-size: 22px;
   }
 }
+
 .cs_fs_32 {
   font-size: 32px;
   line-height: 1.25em;
+
   @media (max-width: 1199px) {
     font-size: 28px;
   }
 }
+
 .cs_fs_48 {
   font-size: 48px;
   line-height: 1.21em;
   letter-spacing: -1px;
+
   @media (max-width: 1199px) {
     font-size: 40px;
     letter-spacing: 0px;
   }
+
   @media (max-width: 767px) {
     font-size: 32px;
     line-height: 1.25em;
   }
 }
+
 .cs_fs_62 {
   font-size: 62px;
   line-height: 1.113em;
   letter-spacing: -2px;
-  > * {
+
+  >* {
     letter-spacing: 0;
   }
+
   @media (max-width: 1199px) {
     font-size: 50px;
     letter-spacing: -1px;
   }
+
   @media (max-width: 575px) {
     font-size: 42px;
     letter-spacing: -1px;
@@ -76,18 +92,22 @@
   font-size: 72px;
   line-height: 1.14em;
   letter-spacing: -2px;
+
   @media (max-width: 1400px) {
     font-size: 62px;
     letter-spacing: -1px;
   }
+
   @media (max-width: 1199px) {
     font-size: 56px;
     letter-spacing: -1px;
   }
+
   @media (max-width: 991px) {
     font-size: 46px;
     line-height: 1.18em;
   }
+
   @media (max-width: 575px) {
     font-size: 42px;
     line-height: 1.25em;
@@ -126,6 +146,7 @@
 .cs_radius_7 {
   border-radius: 7px;
 }
+
 .cs_radius_8 {
   border-radius: 8px;
 }
@@ -141,6 +162,7 @@
 .cs_radius_20 {
   border-radius: 20px;
 }
+
 .cs_radius_24 {
   border-radius: 24px;
 }
@@ -153,6 +175,7 @@
 
 .cs_pl_40 {
   padding-left: 40px;
+
   @media (max-width: 991px) {
     padding-left: 0;
     margin-top: 40px;
@@ -210,12 +233,14 @@
 .cs_gap_y_30 {
   gap: 30px 0;
 }
+
 .cs_gap_y_32 {
   gap: 32px 0;
 }
 
 .cs_gap_y_35 {
   gap: 35px 0;
+
   @media (max-width: 991px) {
     gap: 30px 0;
   }
@@ -223,6 +248,7 @@
 
 .cs_gap_y_40 {
   gap: 40px 0;
+
   @media (max-width: 991px) {
     gap: 30px 0;
   }
@@ -230,6 +256,7 @@
 
 .cs_gap_y_45 {
   gap: 45px 0;
+
   @media (max-width: 991px) {
     gap: 30px 0;
   }
@@ -237,6 +264,7 @@
 
 .cs_gap_y_50 {
   gap: 50px 0;
+
   @media (max-width: 991px) {
     gap: 30px 0;
   }
@@ -244,6 +272,7 @@
 
 .cs_gap_y_60 {
   gap: 60px 0;
+
   @media (max-width: 991px) {
     gap: 30px 0;
   }
@@ -251,9 +280,11 @@
 
 .cs_gap_y_64 {
   gap: 64px 0;
+
   @media (max-width: 1199px) {
     gap: 50px 0;
   }
+
   @media (max-width: 991px) {
     gap: 40px 0;
   }
@@ -275,31 +306,38 @@
   .cs_gap_x_32 {
     margin-left: -16px;
     margin-right: -16px;
-    > * {
+
+    >* {
       padding-left: 16px;
       padding-right: 16px;
     }
   }
+
   .cs_gap_x_40 {
     margin-left: -20px;
     margin-right: -20px;
-    > * {
+
+    >* {
       padding-left: 20px;
       padding-right: 20px;
     }
   }
+
   .cs_gap_x_50 {
     margin-left: -25px;
     margin-right: -25px;
-    > * {
+
+    >* {
       padding-left: 25px;
       padding-right: 25px;
     }
   }
+
   .cs_gap_x_64 {
     margin-left: -32px;
     margin-right: -32px;
-    > * {
+
+    >* {
       padding-left: 32px;
       padding-right: 32px;
     }
@@ -309,7 +347,8 @@
 .cs_gap_x_20 {
   margin-left: -10px;
   margin-right: -10px;
-  > * {
+
+  >* {
     padding-left: 10px;
     padding-right: 10px;
   }
@@ -331,6 +370,7 @@ hr {
 
 .cs_bg_fixed {
   background-attachment: fixed;
+
   @media (max-width: 1370px) {
     background-attachment: initial;
   }
@@ -341,6 +381,7 @@ hr {
   align-items: center;
   justify-content: center;
 }
+
 .cs_center_column {
   display: flex;
   align-items: center;
@@ -358,6 +399,7 @@ hr {
 .cs_heading_color {
   color: var(--heading-color);
 }
+
 .cs_heading_color_2 {
   color: var(--heading-color-2);
 }
@@ -389,58 +431,73 @@ hr {
 /* Start Accordion */
 .cs_accordians.cs_style_1 {
   margin-left: 60px;
+
   @media (max-width: 1400px) {
     margin-left: 20px;
   }
+
   @media (max-width: 1199px) {
     margin-left: 0px;
   }
+
   .cs_accordian_title {
     margin-bottom: 0;
     transition: all 0.3s ease;
   }
+
   .cs_accordian_body {
     padding: 0 0px 16px 0px;
     margin-top: -8px;
+
     p {
       margin: 0;
     }
   }
+
   .cs_accordian_head {
     padding: 24px 30px 24px 0px;
     position: relative;
     cursor: pointer;
+
     @media (max-width: 991px) {
       padding: 15px 25px 15px 0px;
+
       svg {
         width: 15px;
       }
     }
+
     &:hover {
       .cs_accordian_title {
         color: var(--heading-color);
       }
     }
   }
+
   .cs_accordian {
     border-bottom: 1px solid var(--heading-color);
+
     &.active {
       .cs_accordian_head {
         pointer-events: none;
       }
+
       .cs_accordian_toggle {
         transform: rotate(180deg);
       }
     }
+
     &:first-child {
       .cs_accordian_head {
         padding-top: 0;
       }
+
       .cs_accordian_toggle {
         top: 8px;
       }
     }
   }
+
   .cs_accordian_toggle {
     display: flex;
     transition: all 0.3s ease;
@@ -449,9 +506,11 @@ hr {
     right: 0;
   }
 }
+
 .cs_accordian_border {
   border: 1px solid var(--border-color);
 }
+
 /* End Accordion */
 .cs_btn.cs_style_1 {
   display: inline-flex;
@@ -467,41 +526,50 @@ hr {
   text-shadow: 0 50px 0 currentColor;
   overflow: hidden;
   transition: all 0.8s ease;
+
   span {
     transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
+
   &:hover {
     transform: translateY(-2px);
     background-color: rgba(255, 255, 255, 0.8);
+
     span {
       transform: translateY(-50px);
     }
   }
+
   &.cs_type_1 {
     color: var(--white-color);
     background: linear-gradient(1deg, #1c0e3f -8.1%, #4925a5 57.04%);
   }
 }
+
 .cs_badge {
   display: inline-block;
   border-radius: 20px;
   padding: 6px 20px;
 }
+
 .cs_value_card {
   padding: 24px;
   border: 1px solid #e3e8ef;
   border-radius: 24px;
   transition: all 0.3s ease;
+
   .cs_icon {
     height: 56px;
     width: 56px;
     border-radius: 50%;
   }
+
   &:hover {
     transform: translateY(-8px);
     box-shadow: 0 50px 30px -40px rgba(0, 0, 0, 0.1);
   }
 }
+
 .cs_form_field {
   display: block;
   width: 100%;
@@ -512,13 +580,16 @@ hr {
   resize: none;
   margin-bottom: 0;
   color: var(--body-color);
+
   &:focus {
     border-color: var(--accent-color);
   }
 }
+
 .breadcrumb-item.active {
   color: var(--accent-color);
 }
+
 @media (max-width: 991px) {
   .cs_mb_32 {
     margin-bottom: 24px;

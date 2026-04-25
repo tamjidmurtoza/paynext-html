@@ -1,19 +1,27 @@
+/*--------------------------------------------------------------
+  17. Workflow
+----------------------------------------------------------------*/
 .cs_workflow_wrap {
   padding-left: 40px;
+
   @media (max-width: 991px) {
     padding-left: 0;
   }
+
   .cs_iconbox {
     position: relative;
     padding-bottom: 52px;
     padding-left: 64px;
+
     &:last-child {
       padding-bottom: 0;
+
       &::before,
       &::after {
         display: none;
       }
     }
+
     &::before,
     &::after {
       content: "";
@@ -22,30 +30,36 @@
       left: 17px;
       top: 0;
     }
+
     &::before {
       height: 0%;
       background-color: #c1b6f8;
       z-index: 1;
     }
+
     &::after {
       height: 100%;
       background-color: #fff;
     }
+
     &.active {
       .cs_iconbox_icon {
         background-color: #a38cf3;
         animation: jump 0.3s cubic-bezier(0.5, 2.2, 0.7, 0.7) alternate;
+
         svg,
         img {
           filter: invert(100%) sepia(100%) grayscale(100%) brightness(200%);
         }
       }
+
       &::before {
         transition: all 2s ease;
         height: 100%;
       }
     }
   }
+
   .cs_iconbox_icon {
     width: 42px;
     height: 42px;
@@ -57,6 +71,7 @@
     z-index: 2;
   }
 }
+
 @keyframes jump {
   from {
     transform: scale(1);

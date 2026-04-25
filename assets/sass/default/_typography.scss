@@ -1,5 +1,5 @@
 /*--------------------------------------------------------------
-1. Typography
+03. Typography
 ----------------------------------------------------------------*/
 body,
 html {
@@ -11,9 +11,11 @@ html {
   font-weight: 300;
   overflow-x: clip;
 }
+
 body {
   overscroll-behavior: none;
 }
+
 h1,
 h2,
 h3,
@@ -166,6 +168,7 @@ textarea {
   color: var(--heading-color);
   transition: all 0.4s ease;
 }
+
 label {
   margin-bottom: 5px;
 }
