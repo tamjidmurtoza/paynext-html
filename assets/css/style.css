@@ -3242,10 +3242,6 @@ hr {
   border: 1px solid #e7e7e7;
   border-radius: 50px;
 }
-.cs_newsletter.cs_style_1 .cs_newsletter_input::-moz-placeholder {
-  color: var(--body-color);
-  opacity: 0.75;
-}
 .cs_newsletter.cs_style_1 .cs_newsletter_input::placeholder {
   color: var(--body-color);
   opacity: 0.75;
@@ -3789,6 +3785,9 @@ hr {
   border-bottom: 0;
   border-radius: 70px 70px 0 0;
 }
+.cs_cta_style_2 .cs_contact_img .cs_img_outline img {
+  border-radius: inherit;
+}
 .cs_cta_style_2 .cs_cta_left {
   flex: none;
   max-width: 390px;
@@ -3860,8 +3859,7 @@ hr {
   height: 62px;
   width: 62px;
   border-radius: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .cs_testimonial.cs_style_1 .cs_testimonial_blockquote {
   line-height: 1.67em;
