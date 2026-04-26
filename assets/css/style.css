@@ -3786,7 +3786,7 @@ hr {
   border-radius: 70px 70px 0 0;
 }
 .cs_cta_style_2 .cs_contact_img .cs_img_outline img {
-  border-radius: inherit;
+  border-radius: 60px 60px 0 0;
 }
 .cs_cta_style_2 .cs_cta_left {
   flex: none;
